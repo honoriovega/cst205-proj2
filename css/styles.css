@@ -1,16 +1,14 @@
-.chatroomBox
-{
-
-}
-
 .header {
 	
 	color:white;
+	background-color:gray;
 }
+
+
 body 
 {
 	
-background-image: url('http://wallpaper-gallery.net/images/background-image/background-image-17.jpg');
+background-image: url('../images/background.jpg');
 }
 
 .users {
