@@ -5,8 +5,8 @@
         <style>
 			#userPicture
 			{
-				width:15px;
-				height:15px;
+				width:25px;
+				height:25px;
 				
 				display:inline-block;
 			}
@@ -19,7 +19,7 @@
         
         <?php
 			for($i = 0; $i < rand(10,15); $i++)
-				echo "random_user" . rand(1,100) . "<br>";
+				echo  divColor() . "random_user" . rand(1,100) . "<br>";
         ?>
         </div>
         <div class='box'>
@@ -54,13 +54,25 @@
 					return "<div id='userPicture' style='background-color:" . randomColor(). ";'></div>";
 				}
            
-				for($i = 0; $i < rand(50,100); $i++)
+				for($i = 0; $i < rand(10,100); $i++)
 				{
-					echo "Message " . divColor() . ($i + 1) . ": " . randomWord() . "<br>";
+					echo "<h4 style='display:inline-block;'>Message" .($i + 1) . " </h4> " . divColor() . ": " . randomWord() . "<br>";
 				}
            ?>
          
         </div>
-  <div class='messageBox'><p>Enter message</p></div>
+  <div class='messageBox'> <input type="text" id="message" name="message" value="Enter message">
+		<button onclick="doThis()">Send message</button></div>
+		
+	<script>
+		function doThis()
+		{
+			var text = document.getElementById("message").value;
+			
+			var message = 'You tried to send the following message:  "' + text + '"';
+			
+			alert(message);
+		}
+	</script>
     </body>
 </html>

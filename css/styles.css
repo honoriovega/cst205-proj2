@@ -7,7 +7,8 @@
 .messageBox
 {
 	background-color:white;
-
+	width:500px;
+	margin: auto;
 }
 body 
 {
@@ -33,7 +34,7 @@ margin:auto;
 background-color:white;
 overflow:scroll;
 }
-
+/*
 .messageBox {
  width:400px;
  height:50px;
@@ -42,3 +43,4 @@ border-width: 5px;
 margin:auto;
 margin-top:420px;
 }
+*/
