@@ -22,6 +22,7 @@ background-image: url('../images/background.jpg');
 	height:500px;
 	border-color:red;
 	background-color:white;
+	overflow:scroll;
 }
 
 .box {
@@ -34,6 +35,14 @@ margin:auto;
 background-color:white;
 overflow:scroll;
 }
+#userPicture
+{
+	width:25px;
+	height:25px;
+	
+	display:inline-block;
+}
+
 /*
 .messageBox {
  width:400px;
