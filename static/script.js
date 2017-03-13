@@ -30504,7 +30504,7 @@ var Sound = exports.Sound = function (_React$Component) {
                         )
                     ),
                     React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),
-                    React.createElement('input', { type: 'submit', id: 'submit', onClick: this.handleSubmit })
+                    React.createElement('input', { type: 'submit', id: 'submit', onClick: this.handleSubmitMusic })
                 )
             );
         }
