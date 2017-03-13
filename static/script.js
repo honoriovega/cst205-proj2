@@ -30411,10 +30411,107 @@ ReactDOM.render(React.createElement(_Content.Content, null), document.getElement
 
 /***/ }),
 /* 238 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-throw new Error("Module build failed: SyntaxError: Expected corresponding JSX closing tag for <formon> (49:12)\n\n\u001b[0m \u001b[90m 47 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33minput\u001b[39m type \u001b[33m=\u001b[39m \u001b[32m\"text\"\u001b[39m id \u001b[33m=\u001b[39m \u001b[32m\"searchQuery\"\u001b[39m name\u001b[33m=\u001b[39m\u001b[32m\"searchQuery\"\u001b[39m \u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 48 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33minput\u001b[39m type\u001b[33m=\u001b[39m\u001b[32m\"submit\"\u001b[39m id \u001b[33m=\u001b[39m \u001b[32m\"submit\"\u001b[39m \u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mform\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m    | \u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 51 | \u001b[39m        )\u001b[33m;\u001b[39m\n \u001b[90m 52 | \u001b[39m    }\u001b[0m\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Sound = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(30);
+
+var React = _interopRequireWildcard(_react);
+
+var _Socket = __webpack_require__(39);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Sound = exports.Sound = function (_React$Component) {
+    _inherits(Sound, _React$Component);
+
+    function Sound(props) {
+        _classCallCheck(this, Sound);
+
+        var _this = _possibleConstructorReturn(this, (Sound.__proto__ || Object.getPrototypeOf(Sound)).call(this, props));
+
+        _this.state = {};
+        return _this;
+    }
+
+    _createClass(Sound, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+
+            _Socket.Socket.on('fromSpotify', function (data) {
+                console.log("hello from spotify");
+            });
+        }
+    }, {
+        key: 'handleSubmitMusic',
+        value: function handleSubmitMusic(event) {
+
+            var searchType = document.getElementById('SearchFor').value;
+            var searchQuery = document.getElementById('SearchQuery').value;
+
+            _Socket.Socket.emit('Spotify', {
+
+                'searchType': searchType,
+                'searchQuery': searchQuery
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'div',
+                null,
+                React.createElement(
+                    'h4',
+                    null,
+                    ' Spotify web player! '
+                ),
+                React.createElement(
+                    'form',
+                    { on: true, onSubmit: this.handleSubmitMusic },
+                    React.createElement(
+                        'select',
+                        { id: 'SearchFor' },
+                        React.createElement(
+                            'option',
+                            { value: 'Artist' },
+                            'Artist'
+                        ),
+                        React.createElement(
+                            'option',
+                            { value: 'Track' },
+                            'Track'
+                        ),
+                        React.createElement(
+                            'option',
+                            { value: 'User' },
+                            'User'
+                        )
+                    ),
+                    React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),
+                    React.createElement('input', { type: 'submit', id: 'submit' })
+                )
+            );
+        }
+    }]);
+
+    return Sound;
+}(React.Component);
 
 /***/ })
 /******/ ]);
