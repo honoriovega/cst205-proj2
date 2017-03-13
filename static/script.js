@@ -13428,7 +13428,7 @@ var Chatroom = exports.Chatroom = function (_React$Component) {
 
 			return React.createElement(
 				'div',
-				{ className: 'chatroom' },
+				null,
 				React.createElement(
 					'div',
 					{ id: 'messageArea', className: 'msgArea' },
