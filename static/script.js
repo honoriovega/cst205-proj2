@@ -30483,7 +30483,7 @@ var Sound = exports.Sound = function (_React$Component) {
                 ),
                 React.createElement(
                     'form',
-                    { on: true, onSubmit: this.handleSubmitMusic },
+                    { onSubmit: this.handleSubmitMusic },
                     React.createElement(
                         'select',
                         { id: 'SearchFor' },
