@@ -30511,6 +30511,11 @@ var Sound = exports.Sound = function (_React$Component) {
                     ),
                     React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),
                     React.createElement('input', { type: 'submit', id: 'submit' })
+                ),
+                React.createElement(
+                    'div',
+                    null,
+                    React.createElement('iframe', { src: 'https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf', width: '300', height: '380', frameborder: '0', allowtransparency: 'true' })
                 )
             );
         }

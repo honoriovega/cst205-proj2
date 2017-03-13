@@ -48,6 +48,9 @@ export class Sound extends React.Component {
                 <input type = "text" id = "searchQuery" name="searchQuery" />
                 <input type="submit" id = "submit" />
             </form>
+            <div>
+            <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+            </div>
             </div>
         );
     }
