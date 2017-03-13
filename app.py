@@ -155,6 +155,7 @@ def spotify(data):
 	url = "https://api.spotify.com/v1/tracks/1zHlj4dQ8ZAtrayhuDDmkY"
 	track_response = requests.get(url, headers= my_headers)
 	print track_response.json()
+	print track_response['uri']
 	socketio.emit('fromSpotify', "hello from spotify")
 	
 	
