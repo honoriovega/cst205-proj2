@@ -145,7 +145,7 @@ def on_new_number(data):
 	
 @socketio.on('Spotify')
 def spotify(data):
-	response = requests.get("https://accounts.spotify.com/authorize/?client_id=ee2fece8b1b948b196995edc5cd1464e&response_type=code&redirect_uri=https%3A%2F%cst205-project2.herokuapp.comk&scope=user-read-private%20user-read-email&state=34fFs29kd09")
+	response = requests.get("https://accounts.spotify.com/authorize/?client_id=ee2fece8b1b948b196995edc5cd1464e&response_type=code&redirect_uri=https%3A%2F%cst205-project2.herokuapp.com&scope=user-read-private%20user-read-email&state=34fFs29kd09")
 	json = response.json()
 	print json
 	
