@@ -67,7 +67,9 @@ export class Chatroom extends React.Component {
 				<div className='sendMessageArea'>
 				<Button name='Send Message'/>
 				</div>
+				<div>
 				<Sound/>
+				</div>
 			</div>
         );
     }

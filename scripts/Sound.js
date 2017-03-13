@@ -36,14 +36,14 @@ export class Sound extends React.Component {
     
       render() {
         return (
-            <form onSubmit = {this.handleSubmit}>
+            <form>
                 <select id = "SearchFor">
                 <option value="Artist">Artist</option>
                 <option value="Track" >Track</option>
                 <option value="User">User</option>
                 </select>
                 <input type = "text" id = "searchQuery" name="searchQuery" />
-                <input type="submit" id = "submit"/>
+                <input type="submit" id = "submit" onClick= {this.handleSubmit}/>
             </form>
         );
     }

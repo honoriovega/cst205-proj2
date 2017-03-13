@@ -13409,7 +13409,11 @@ var Chatroom = exports.Chatroom = function (_React$Component) {
 					{ className: 'sendMessageArea' },
 					React.createElement(_Button.Button, { name: 'Send Message' })
 				),
-				React.createElement(_Sound.Sound, null)
+				React.createElement(
+					'div',
+					null,
+					React.createElement(_Sound.Sound, null)
+				)
 			);
 		}
 	}]);
@@ -30472,7 +30476,7 @@ var Sound = exports.Sound = function (_React$Component) {
         value: function render() {
             return React.createElement(
                 'form',
-                { onSubmit: this.handleSubmit },
+                null,
                 React.createElement(
                     'select',
                     { id: 'SearchFor' },
@@ -30493,7 +30497,7 @@ var Sound = exports.Sound = function (_React$Component) {
                     )
                 ),
                 React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),
-                React.createElement('input', { type: 'submit', id: 'submit' })
+                React.createElement('input', { type: 'submit', id: 'submit', onClick: this.handleSubmit })
             );
         }
     }]);
