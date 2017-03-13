@@ -5,7 +5,7 @@ export class Sound extends React.Component {
     
      handleSubmitMusic(event) {
          
-         console.log("Type of search :" + document.getElementById('term').value);
+         console.log("Type of search :" + document.getElementById('id').value);
       
       
          

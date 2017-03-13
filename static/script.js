@@ -30447,7 +30447,7 @@ var Sound = exports.Sound = function (_React$Component) {
         key: 'handleSubmitMusic',
         value: function handleSubmitMusic(event) {
 
-            console.log("Type of search :" + document.getElementById('term').value);
+            console.log("Type of search :" + document.getElementById('id').value);
         }
     }, {
         key: 'render',
