@@ -1,11 +1,11 @@
 import * as React from 'react';
-
+import { Socket } from './Socket';
 
 export class Sound extends React.Component {
     
      handleSubmitMusic(event) {
          
-         
+         console.log("Type of search :" + document.getElementById('SearchFor'));
       
       
          

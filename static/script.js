@@ -30424,6 +30424,8 @@ var _react = __webpack_require__(30);
 
 var React = _interopRequireWildcard(_react);
 
+var _Socket = __webpack_require__(39);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30442,38 +30444,41 @@ var Sound = exports.Sound = function (_React$Component) {
     }
 
     _createClass(Sound, [{
-        key: "handleSubmitMusic",
-        value: function handleSubmitMusic(event) {}
+        key: 'handleSubmitMusic',
+        value: function handleSubmitMusic(event) {
+
+            console.log("Type of search :" + document.getElementById('SearchFor'));
+        }
     }, {
-        key: "render",
+        key: 'render',
         value: function render() {
             return React.createElement(
-                "form",
+                'form',
                 { onSubmit: this.handleSubmitMusic },
                 React.createElement(
-                    "select",
-                    { id: "SearchFor" },
+                    'select',
+                    { id: 'SearchFor' },
                     React.createElement(
-                        "option",
-                        { value: "Artist" },
-                        "Artist"
+                        'option',
+                        { value: 'Artist' },
+                        'Artist'
                     ),
                     React.createElement(
-                        "option",
-                        { value: "Track" },
-                        "Track"
+                        'option',
+                        { value: 'Track' },
+                        'Track'
                     ),
                     React.createElement(
-                        "option",
-                        { value: "User" },
-                        "User"
+                        'option',
+                        { value: 'User' },
+                        'User'
                     )
                 ),
-                React.createElement("input", { type: "text", id: "searchQuery", name: "searchQuery" }),
+                React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),
                 React.createElement(
-                    "button",
+                    'button',
                     null,
-                    "Search Music on Spotify!"
+                    'Search Music on Spotify!'
                 )
             );
         }
