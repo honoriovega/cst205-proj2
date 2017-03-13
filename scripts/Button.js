@@ -18,7 +18,7 @@ export class Button extends React.Component {
 		console.log("tried to send ", newMsg);
 
         console.log("messag is " + newMsg);
-        document.getElementById('msg').val = "";
+        document.getElementById('msg').value = "";
 
 console.log('Generated a random number: ', random);
 FB.getLoginStatus((response) => {
