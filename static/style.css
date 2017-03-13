@@ -16,11 +16,11 @@ html {
 {
 	width:70%;
     background-color: #ffffff;
-    height: 200px;
+    height: 50%;
     margin: 50px;
     border: 2px solid black;
     opacity: 0.8;
-    text-align:center;
+    text-align:right;
     padding:30px;
 }
 
@@ -37,8 +37,6 @@ html {
 .msgArea
 {
   
-	background-color:white;
-	height:70%;
 	overflow-y:scroll;
 }
 
