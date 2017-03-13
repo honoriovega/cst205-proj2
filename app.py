@@ -160,6 +160,17 @@ def on_new_number(data):
 	socketio.emit('all numbers', {
 			'numbers' : all_numbers
 	})
+	
+	
+	
+@socketio.on('Spotify')
+def spotify(data):
+	searchType = data['searchType']
+	searchQuery =  data['searchQuery']
+	socketio.emit('fromSpotify', "hello from spotify")
+	
+	
+	
 @socketio.on('greet user')
 def greet_user(data):
 	picture = ''

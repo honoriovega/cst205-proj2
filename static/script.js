@@ -30437,17 +30437,35 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Sound = exports.Sound = function (_React$Component) {
     _inherits(Sound, _React$Component);
 
-    function Sound() {
+    function Sound(props) {
         _classCallCheck(this, Sound);
 
-        return _possibleConstructorReturn(this, (Sound.__proto__ || Object.getPrototypeOf(Sound)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Sound.__proto__ || Object.getPrototypeOf(Sound)).call(this, props));
+
+        _this.state = {};
+        return _this;
     }
 
     _createClass(Sound, [{
-        key: 'handleSubmitMusic',
-        value: function handleSubmitMusic(event) {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
 
-            console.log("Type of search :" + document.getElementById('SearchFor').value);
+            _Socket.Socket.on('fromSpotify', function (data) {
+                console.log("hello from spotify");
+            });
+        }
+    }, {
+        key: 'handleSubmitMusic',
+        value: function handleSubmitMusic() {
+
+            var searchType = document.getElementById('SearchFor').value;
+            var searchQuery = document.getElementById('SearchQuery').value;
+
+            _Socket.Socket.emit('Spotify', {
+
+                'searchType': searchType,
+                'searchQuery': searchQuery
+            });
         }
     }, {
         key: 'render',
@@ -30460,17 +30478,17 @@ var Sound = exports.Sound = function (_React$Component) {
                     { id: 'SearchFor' },
                     React.createElement(
                         'option',
-                        { value: 'Artist', id: 'term' },
+                        { value: 'Artist' },
                         'Artist'
                     ),
                     React.createElement(
                         'option',
-                        { value: 'Track', id: 'term' },
+                        { value: 'Track' },
                         'Track'
                     ),
                     React.createElement(
                         'option',
-                        { value: 'User', id: 'term' },
+                        { value: 'User' },
                         'User'
                     )
                 ),

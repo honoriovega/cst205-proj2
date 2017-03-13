@@ -2,13 +2,35 @@ import * as React from 'react';
 import { Socket } from './Socket';
 
 export class Sound extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+			
+        };
+    }
     
-     handleSubmitMusic(event) {
+
+    
+
+    componentDidMount() {
+    
+    Socket.on('fromSpotify' ,(data) =>{
+        console.log("hello from spotify");
+        
+    });
+    }
+    
+     handleSubmitMusic() {
          
-         console.log("Type of search :" + document.getElementById('SearchFor').value);
-      
-      
          
+         var searchType = document.getElementById('SearchFor').value;
+         var searchQuery = document.getElementById('SearchQuery').value;
+        
+        Socket.emit('Spotify' , {
+            
+            'searchType' : searchType, 
+            'searchQuery' : searchQuery,
+        });
      }
     
     
@@ -16,9 +38,9 @@ export class Sound extends React.Component {
         return (
             <form onSubmit={this.handleSubmitMusic}>
                 <select id = "SearchFor">
-                <option value="Artist" id="term">Artist</option>
-                <option value="Track" id="term">Track</option>
-                <option value="User" id = "term" >User</option>
+                <option value="Artist">Artist</option>
+                <option value="Track" >Track</option>
+                <option value="User">User</option>
                 </select>
                 <input type = "text" id = "searchQuery" name="searchQuery" />
                 <button>Search Music on Spotify!</button>
