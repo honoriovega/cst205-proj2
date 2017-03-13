@@ -39,6 +39,7 @@ export class Sound extends React.Component {
         <div>    
             <h4> Spotify web player! </h4>
             <form onSubmit={this.handleSubmitMusic}>
+                <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
                 <select id = "SearchFor">
                 <option value="Artist">Artist</option>
                 <option value="Album">Album</option>
@@ -49,7 +50,6 @@ export class Sound extends React.Component {
                 <input type="submit" id = "submit" />
             </form>
             <div>
-            <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
             </div>
             </div>
         );
