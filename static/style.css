@@ -17,7 +17,7 @@ html {
 	width:70%;
     height: 50%;
     margin: 50px;
-    text-align:left;
+   float: right;
     padding:30px;
 }
 
