@@ -14,11 +14,10 @@ html {
 
 .chatroom
 {
-	width:70%;
-    height: 50%;
-    margin: 50px;
-   float: right;
-    padding:30px;
+	width:80%;
+    height: 55%;
+    margin:auto;
+   
 }
 
 .usersSection
@@ -35,7 +34,8 @@ html {
 {
     border: 2px solid black;
 	background-color:white;
-	height:70%;
+	height:100%;
+
 	 opacity: 0.8;
 	overflow-y:scroll;
 	background-color: #ffffff;
