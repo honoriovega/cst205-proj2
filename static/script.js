@@ -13278,11 +13278,7 @@ var Content = exports.Content = function (_React$Component) {
                     null,
                     'CST 205 - Project 2'
                 ),
-                React.createElement(
-                    'div',
-                    { className: 'scroll' },
-                    React.createElement(_Chatroom.Chatroom, { messages: this.state.messages })
-                ),
+                React.createElement(_Chatroom.Chatroom, { messages: this.state.messages }),
                 React.createElement(
                     'div',
                     { className: 'usersSection' },

@@ -107,15 +107,13 @@ function tryToGreet() {
             
                 <h1>CST 205 - Project 2</h1>
 
-
                 
-                
-                <div className = "scroll">
                 <Chatroom messages={this.state.messages}/>
-                </div>
+                
 
                 <div className="usersSection">
                 <h2>My name: {this.state['my name']}</h2>
+
 
                 <h3>Total Users: {all_users.length}</h3>
                 <h2>All users:</h2>
