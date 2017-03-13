@@ -90,7 +90,7 @@ def hello():
 	a = gettyApi.initBackground(choice(keywords))
 
 	return flask.render_template('index.html',back=a)
-
+"""
 @socketio.on('connect')
 def on_connect():
 	name = random.randrange(1000, 9999)
@@ -112,35 +112,14 @@ def on_connect():
 	)
 	
 	
-	"""
-	greet = botcommands.greetNewUser(
-						str(all_connected_users[flask.request.sid]))
-	"""
+
 	
 	greet = "Welcome to the chatroom new user. Type !! help to view list of commands"
 	addBotMessage(greet)
 
 	fetchAndEmit()
 """
-@socketio.on('disconnect')
-def on_disconnect():
 
-	newUser = str(all_connected_users[flask.request.sid])
-	newMsg = botcommands.sayBye(newUser) 
-	addBotMessage( newMsg )
-
-	print 'Someone disconnected!', flask.request.sid
-	del all_connected_users[flask.request.sid]
-	print 'All connected users now:', all_connected_users
-	socketio.emit(
-		'list of all users',
-		{
-			'users': all_connected_users.values()
-		}
-	)
-	
-	fetchAndEmit()
-"""
 @socketio.on('new number')
 def on_new_number(data):
 	"""

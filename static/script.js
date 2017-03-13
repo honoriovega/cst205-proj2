@@ -30472,7 +30472,7 @@ var Sound = exports.Sound = function (_React$Component) {
         value: function render() {
             return React.createElement(
                 'form',
-                null,
+                { onSubmit: this.handleSubmit },
                 React.createElement(
                     'select',
                     { id: 'SearchFor' },
@@ -30493,7 +30493,7 @@ var Sound = exports.Sound = function (_React$Component) {
                     )
                 ),
                 React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),
-                React.createElement('input', { type: 'submit', id: 'submit', text: 'Search Music on Spotify!', onClick: this.handleSubmitMusic })
+                React.createElement('input', { type: 'submit', id: 'submit' })
             );
         }
     }]);
