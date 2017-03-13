@@ -30456,7 +30456,7 @@ var Sound = exports.Sound = function (_React$Component) {
         }
     }, {
         key: 'handleSubmitMusic',
-        value: function handleSubmitMusic() {
+        value: function handleSubmitMusic(event) {
 
             var searchType = document.getElementById('SearchFor').value;
             var searchQuery = document.getElementById('SearchQuery').value;
@@ -30472,7 +30472,7 @@ var Sound = exports.Sound = function (_React$Component) {
         value: function render() {
             return React.createElement(
                 'form',
-                { onSubmit: this.handleSubmitMusic },
+                null,
                 React.createElement(
                     'select',
                     { id: 'SearchFor' },
@@ -30493,11 +30493,7 @@ var Sound = exports.Sound = function (_React$Component) {
                     )
                 ),
                 React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),
-                React.createElement(
-                    'button',
-                    null,
-                    'Search Music on Spotify!'
-                )
+                React.createElement('input', { type: 'submit', id: 'submit', text: 'Search Music on Spotify!', onClick: this.handleSubmitMusic })
             );
         }
     }]);
