@@ -13283,7 +13283,8 @@ var Content = exports.Content = function (_React$Component) {
                     'data-auto-logout-link': 'true' }),
                 React.createElement('div', { onClick: this.tryToGree,
                     className: 'g-signin2',
-                    'data-theme': 'dark' })
+                    'data-theme': 'dark' }),
+                React.createElement(Sound, null)
             );
         }
     }]);
@@ -13409,11 +13410,7 @@ var Chatroom = exports.Chatroom = function (_React$Component) {
 					{ className: 'sendMessageArea' },
 					React.createElement(_Button.Button, { name: 'Send Message' })
 				),
-				React.createElement(
-					'div',
-					null,
-					React.createElement(_Sound.Sound, null)
-				)
+				React.createElement('div', null)
 			);
 		}
 	}]);
