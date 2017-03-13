@@ -105,7 +105,7 @@ function tryToGreet() {
         return (
             <div>
             
-                <h1 className="heading">Otter Chatroom</h1>
+                <h1 className="heading">CST 205 - Project 2</h1>
 
 
                 

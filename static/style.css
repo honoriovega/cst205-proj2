@@ -27,14 +27,11 @@ html {
     background-color:white;
 }
 
-body
-{
- background-image: url("/static/mybackground.jpg");
-}
+
 
 .msgArea
 {
-
+    opacity: 0.8;
 	background-color:white;
 	height:70%;
 	overflow-y:scroll;

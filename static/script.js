@@ -13316,7 +13316,7 @@ var Content = exports.Content = function (_React$Component) {
                 React.createElement(
                     'h1',
                     { className: 'heading' },
-                    'Otter Chatroom'
+                    'CST 205 - Project 2'
                 ),
                 React.createElement(_Chatroom.Chatroom, { messages: this.state.messages }),
                 React.createElement(

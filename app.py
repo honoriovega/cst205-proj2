@@ -1,6 +1,7 @@
 import random, os, flask, flask_socketio, flask_sqlalchemy,requests, time
 from random import randint, choice
 from flask_socketio import send
+import gettyApi
 import botcommands
 
 import urlparse
@@ -9,8 +10,8 @@ import json
 app = flask.Flask(__name__)
 
 
-#app.config[ 'SQLALCHEMY_DATABASE_URI' ] = 'postgresql://potato:potatosareawesome@localhost/postgres'
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
+app.config[ 'SQLALCHEMY_DATABASE_URI' ] = 'postgresql://potato:potatosareawesome@localhost/postgres'
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = flask_sqlalchemy.SQLAlchemy(app)
 
@@ -85,7 +86,9 @@ def addPictureMessage(userPicture, name, apiLink):
 	
 @app.route('/')
 def hello():
-	return flask.render_template('index.html')
+	a = gettyApi.getImages('background')
+
+	return flask.render_template('index.html',back=a)
 
 @socketio.on('connect')
 def on_connect():
@@ -106,10 +109,14 @@ def on_connect():
 			'users': all_connected_users.values()
 		}
 	)
-
+	
+	
+	"""
 	greet = botcommands.greetNewUser(
 						str(all_connected_users[flask.request.sid]))
-
+	"""
+	
+	greet = "Welcome to the chatroom new user. Type !! help to view list of commands"
 	addBotMessage(greet)
 
 	fetchAndEmit()
@@ -229,7 +236,7 @@ def on_new_msg(data):
 			print "yes an url"
 			addPictureMessage(picture,USERNAME,url)
 			
-		fetchAndEmit()
+		#fetchAndEmit()
 		
 		# handle bot command
 		if(msg[:2] == '!!'):
@@ -242,9 +249,10 @@ def on_new_msg(data):
 			else:
 				addBotMessage(response)
 			
-			fetchAndEmit()
+			#fetchAndEmit()
 		
 
+	fetchAndEmit()
 
 if __name__ == '__main__':
 	socketio.run(

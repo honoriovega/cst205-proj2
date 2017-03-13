@@ -8,7 +8,7 @@ def processBotCommand(userSubmitted):
 
     if('!! about' in userSubmitted):
 
-        msg = 'This chatroom was created by Honorio Vega'
+        msg = 'website created by Honorio Vega, Javar Alexander, Antonio Villagomez'
         return msg
 
     elif('!! say' in userSubmitted):
@@ -39,14 +39,15 @@ def processBotCommand(userSubmitted):
         return img
     
     elif('!! giffy' in userSubmitted):
-        searchTerm = userSubmitted.split('!! getty')[1]
+        searchTerm = userSubmitted.split('!! giffy')[1]
         query = searchTerm.replace(' ','+')
         
         link = "http://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=dc6zaTOxFJmzC&limit=5"
         
         data = json.loads(urllib.urlopen(link).read())
-        apilink = data['data'][0]['images']['downsized_medium']['url']
+        apilink = data['data'][randint(0,len(data['data']) -1)]['images']['downsized_medium']['url']
         return apilink
+    
 
 
     else:

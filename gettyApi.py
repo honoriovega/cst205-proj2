@@ -13,6 +13,3 @@ def getImages(search_term):
  
          
    return json_body['images'][randint(0,length - 1)]['display_sizes'][0]['uri']
-
-
-getImages('cool')
