@@ -30442,15 +30442,38 @@ var Sound = exports.Sound = function (_React$Component) {
     }
 
     _createClass(Sound, [{
-        key: 'render',
+        key: "handleSubmitMusic",
+        value: function handleSubmitMusic(event) {}
+    }, {
+        key: "render",
         value: function render() {
             return React.createElement(
-                'form',
-                { onSubmit: this.handleSubmit },
+                "form",
+                { onSubmit: this.handleSubmitMusic },
                 React.createElement(
-                    'button',
+                    "select",
+                    { id: "SearchFor" },
+                    React.createElement(
+                        "option",
+                        { value: "Artist" },
+                        "Artist"
+                    ),
+                    React.createElement(
+                        "option",
+                        { value: "Track" },
+                        "Track"
+                    ),
+                    React.createElement(
+                        "option",
+                        { value: "User" },
+                        "User"
+                    )
+                ),
+                React.createElement("input", { type: "text", id: "searchQuery", name: "searchQuery" }),
+                React.createElement(
+                    "button",
                     null,
-                    'Music player!'
+                    "Search Music on Spotify!"
                 )
             );
         }
