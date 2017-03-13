@@ -14,10 +14,9 @@ export class Button extends React.Component {
         console.log('bruh i made a new number : ', random);
         console.log('sahhhh dude : ');
         
-        // javar webpack is now running
-        var newMsg = document.getElementById('msg').value;
-		//var newMsg = referenceToMessage.value;
-	//	referenceToMessage.value = "";
+        var referenceToMessage = document.getElementById('msg');
+		var newMsg = referenceToMessage.value;
+		referenceToMessage.value = "";
 		console.log("tried to send ", newMsg);
 
         console.log("messag is " + newMsg);

@@ -8736,10 +8736,9 @@ var Button = exports.Button = function (_React$Component) {
             console.log('bruh i made a new number : ', random);
             console.log('sahhhh dude : ');
 
-            // javar webpack is now running
-            var newMsg = document.getElementById('msg').value;
-            //var newMsg = referenceToMessage.value;
-            //	referenceToMessage.value = "";
+            var referenceToMessage = document.getElementById('msg');
+            var newMsg = referenceToMessage.value;
+            referenceToMessage.value = "";
             console.log("tried to send ", newMsg);
 
             console.log("messag is " + newMsg);
@@ -13383,6 +13382,7 @@ var Chatroom = exports.Chatroom = function (_React$Component) {
 				var res = link.split("=");
 
 				var ytlink = "https://www.youtube.com/embed/" + res[1];
+				console.log(" iran bruh");
 				return React.createElement('iframe', { width: '560', height: '315', src: ytlink });
 			} else return React.createElement(
 				'a',

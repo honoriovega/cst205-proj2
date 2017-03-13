@@ -28,6 +28,7 @@ export class Chatroom extends React.Component {
     		var res = link.split("=");
 			
 			var ytlink = "https://www.youtube.com/embed/" + res[1];
+			console.log(" iran bruh");
 			return <iframe width="560" height="315" src={ytlink } ></iframe>;
 		}
 		else
