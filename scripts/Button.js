@@ -13,8 +13,12 @@ export class Button extends React.Component {
         let random = Math.floor(Math.random() * 100);
         console.log('bruh i made a new number : ', random);
         console.log('sahhhh dude : ');
-
-		var newMsg = document.getElementById('msg').value;
+        
+        // javar webpack is now running
+        var referenceToMessage = document.getElementById('msg');
+        // let me push the changes
+		var newMsg = referenceToMessage.value;
+		referenceToMessage.value = "";
 		console.log("tried to send ", newMsg);
 
         console.log("messag is " + newMsg);
