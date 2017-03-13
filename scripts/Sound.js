@@ -16,7 +16,7 @@ export class Sound extends React.Component {
     
     Socket.on('fromSpotify' ,(data) =>{
         console.log("hello from spotify");
-        document.getElementById("frame").style.display ="none"
+        document.getElementById("frame").style.visibility ="visible"
         
     });
     }

@@ -54,3 +54,6 @@ img {
     width:250px;
     height:250px;
 }
+iframe {
+    visibility:hidden
+}
