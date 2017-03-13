@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Button } from './Button';
 import { Socket } from './Socket';
 import { Chatroom } from './Chatroom';
+import {Sound} from './Sound';
 
 
 export class Content extends React.Component {

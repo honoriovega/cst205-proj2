@@ -13171,6 +13171,8 @@ var _Socket = __webpack_require__(39);
 
 var _Chatroom = __webpack_require__(110);
 
+var _Sound = __webpack_require__(238);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13284,7 +13286,7 @@ var Content = exports.Content = function (_React$Component) {
                 React.createElement('div', { onClick: this.tryToGree,
                     className: 'g-signin2',
                     'data-theme': 'dark' }),
-                React.createElement(Sound, null)
+                React.createElement(_Sound.Sound, null)
             );
         }
     }]);
