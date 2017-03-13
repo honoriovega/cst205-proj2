@@ -120,7 +120,7 @@ def on_connect():
 	addBotMessage(greet)
 
 	fetchAndEmit()
-	
+"""
 @socketio.on('disconnect')
 def on_disconnect():
 
@@ -139,8 +139,7 @@ def on_disconnect():
 	)
 	
 	fetchAndEmit()
-	
-
+"""
 @socketio.on('new number')
 def on_new_number(data):
 	"""

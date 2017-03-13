@@ -13277,32 +13277,6 @@ var Content = exports.Content = function (_React$Component) {
                     'CST 205 - Project 2'
                 ),
                 React.createElement(_Chatroom.Chatroom, { messages: this.state.messages }),
-                React.createElement(
-                    'div',
-                    { className: 'usersSection' },
-                    React.createElement(
-                        'h2',
-                        null,
-                        'My name: ',
-                        this.state['my name']
-                    ),
-                    React.createElement(
-                        'h3',
-                        null,
-                        'Total Users: ',
-                        all_users.length
-                    ),
-                    React.createElement(
-                        'h2',
-                        null,
-                        'All users:'
-                    ),
-                    React.createElement(
-                        'ul',
-                        null,
-                        all_users
-                    )
-                ),
                 React.createElement('div', {
                     className: 'fb-login-button',
                     'data-max-rows': '1',
