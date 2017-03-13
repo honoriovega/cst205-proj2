@@ -36,7 +36,7 @@ if (response.status == 'connected') {
     'msg' : newMsg
 
     });
-     document.getElementById('msg').value = "";
+      document.getElementById("msg").value = " ";
 } else {
 
 
@@ -54,7 +54,7 @@ if (user.isSignedIn()) {
     'number': random,
     'msg': newMsg
     });
-     document.getElementById('msg').value = "";
+     document.getElementById("msg").value = " ";
     
 }
 else {
