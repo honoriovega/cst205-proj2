@@ -10,9 +10,17 @@
 <meta name="google-signin-client_id"
 content="935158962419-7g03oq9tkokkii66lo2et6g8mt049aqt.apps.googleusercontent.com" />
 <script src="https://apis.google.com/js/platform.js" async defer> </script>
-
+<style>
+    body {
+background-image: url({{a}});
+background-repeat: no-repeat;
+background-size:     cover;                    
+background-position: center center;    
+background-color: powderblue; /*default color, if api is unavaliable website will show static color*/
+}
+    
+</style>
     </head>
-<body style='background-image:url("{{ back }}");background-repeat: no-repeat;background-size: 100%;'>
 
 <script>
   window.fbAsyncInit = function() {

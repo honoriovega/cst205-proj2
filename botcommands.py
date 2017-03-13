@@ -45,8 +45,15 @@ def processBotCommand(userSubmitted):
         link = "http://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=dc6zaTOxFJmzC&limit=5"
         
         data = json.loads(urllib.urlopen(link).read())
-        apilink = data['data'][randint(0,len(data['data']) -1)]['images']['downsized_medium']['url']
-        return apilink
+        
+        # no results :-*(
+        if(len(data['data']) == 0 ):
+            return "Sorry I didn't find any gif's with that search term"
+        
+        else:
+        
+            apilink = data['data'][randint(0,len(data['data']) -1)]['images']['downsized_medium']['url']
+            return apilink
     
 
 
