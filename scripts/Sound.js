@@ -38,14 +38,14 @@ export class Sound extends React.Component {
         return (
         <div>    
             <h4> Spotify web player! </h4>
-            <form>
+            <formon onSubmit= {this.handleSubmitMusic}>
                 <select id = "SearchFor">
                 <option value="Artist">Artist</option>
                 <option value="Track" >Track</option>
                 <option value="User">User</option>
                 </select>
                 <input type = "text" id = "searchQuery" name="searchQuery" />
-                <input type="submit" id = "submit" onClick= {this.handleSubmitMusic}/>
+                <input type="submit" id = "submit" />
             </form>
             </div>
         );
