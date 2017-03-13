@@ -105,14 +105,14 @@ function tryToGreet() {
         return (
             <div>
             
-                <h1 className="heading">CST 205 - Project 2</h1>
+                <h1>CST 205 - Project 2</h1>
 
 
                 
                 
-                
+                <div className = "scroll">
                 <Chatroom messages={this.state.messages}/>
-                
+                </div>
 
                 <div className="usersSection">
                 <h2>My name: {this.state['my name']}</h2>
