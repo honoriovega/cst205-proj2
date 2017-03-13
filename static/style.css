@@ -1,0 +1,51 @@
+html {
+    font-family: Helvetica, sans-serif;
+}
+
+.heading {
+
+    text-align:center;
+    background-color:white;
+}
+
+.number-item {
+    background-color: green;
+}
+
+.chatroom
+{
+	width:70%;
+	float:right;
+	padding-right:10px;
+}
+
+.usersSection
+{
+    overflow-y:scroll;
+    width:200px;
+    height:50%;
+    background-color:white;
+}
+
+body
+{
+ background-image: url("/static/mybackground.jpg");
+}
+
+.msgArea
+{
+
+	background-color:white;
+	height:70%;
+	overflow-y:scroll;
+}
+
+p
+{
+	color:black;
+}
+
+img {
+    width:250px;
+    height:250px;
+}
