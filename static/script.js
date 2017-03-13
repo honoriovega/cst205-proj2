@@ -30460,17 +30460,17 @@ var Sound = exports.Sound = function (_React$Component) {
                     { id: 'SearchFor' },
                     React.createElement(
                         'option',
-                        { value: 'Artist' },
+                        { value: 'Artist', id: 'term' },
                         'Artist'
                     ),
                     React.createElement(
                         'option',
-                        { value: 'Track' },
+                        { value: 'Track', id: 'term' },
                         'Track'
                     ),
                     React.createElement(
                         'option',
-                        { value: 'User' },
+                        { value: 'User', id: 'term' },
                         'User'
                     )
                 ),
