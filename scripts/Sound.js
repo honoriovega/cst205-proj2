@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 
-export class Button extends React.Component {
+export class Sound extends React.Component {
     
     
     
