@@ -15,8 +15,14 @@ html {
 .chatroom
 {
 	width:70%;
-	float:right;
-	padding-right:10px;
+    background-color: #ffffff;
+    height: 200px;
+    overflow: scroll;
+    margin: 50px;
+    border: 2px solid black;
+    opacity: 0.8;
+    text-align:center;
+    padding:30px;
 }
 
 .usersSection
