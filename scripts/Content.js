@@ -109,7 +109,7 @@ function tryToGreet() {
                 <h1>CST 205 - Project 2</h1>
 
                 <Chatroom messages={this.state.messages}/>
-                
+                <Sound/>
            
  <div
 className="fb-login-button"
@@ -122,7 +122,7 @@ data-auto-logout-link="true">
                 className="g-signin2"
                 data-theme="dark">
                 </div>
-                <Sound/>
+                
             </div>
         );
     }

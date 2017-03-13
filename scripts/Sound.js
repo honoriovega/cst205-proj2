@@ -41,6 +41,7 @@ export class Sound extends React.Component {
             <form onSubmit={this.handleSubmitMusic}>
                 <select id = "SearchFor">
                 <option value="Artist">Artist</option>
+                <option value="Album">Album</option>
                 <option value="Track" >Track</option>
                 <option value="User">User</option>
                 </select>

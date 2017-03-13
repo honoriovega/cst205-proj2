@@ -13277,6 +13277,7 @@ var Content = exports.Content = function (_React$Component) {
                     'CST 205 - Project 2'
                 ),
                 React.createElement(_Chatroom.Chatroom, { messages: this.state.messages }),
+                React.createElement(_Sound.Sound, null),
                 React.createElement('div', {
                     className: 'fb-login-button',
                     'data-max-rows': '1',
@@ -13285,8 +13286,7 @@ var Content = exports.Content = function (_React$Component) {
                     'data-auto-logout-link': 'true' }),
                 React.createElement('div', { onClick: this.tryToGree,
                     className: 'g-signin2',
-                    'data-theme': 'dark' }),
-                React.createElement(_Sound.Sound, null)
+                    'data-theme': 'dark' })
             );
         }
     }]);
@@ -30492,6 +30492,11 @@ var Sound = exports.Sound = function (_React$Component) {
                             'option',
                             { value: 'Artist' },
                             'Artist'
+                        ),
+                        React.createElement(
+                            'option',
+                            { value: 'Album' },
+                            'Album'
                         ),
                         React.createElement(
                             'option',
