@@ -108,9 +108,6 @@ function tryToGreet() {
             
                 <h1>CST 205 - Project 2</h1>
 
-                <Chatroom messages={this.state.messages}/>
-                <Sound/>
-           
  <div
 className="fb-login-button"
 data-max-rows="1"
@@ -122,6 +119,13 @@ data-auto-logout-link="true">
                 className="g-signin2"
                 data-theme="dark">
                 </div>
+
+
+                <Chatroom messages={this.state.messages}/>
+                <div className = "spotifyContainer">
+                <Sound/>
+           </div>
+
                 
             </div>
         );

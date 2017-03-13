@@ -16,7 +16,7 @@ export class Sound extends React.Component {
     
     Socket.on('fromSpotify' ,(data) =>{
         console.log("hello from spotify");
-        document.getElementById("frame").style.visibility ="visible"
+        document.getElementById("Spotifyframe").style.visibility ="visible"
         
     });
     }
@@ -40,7 +40,7 @@ export class Sound extends React.Component {
         <div>    
             <h4> Spotify web player! </h4>
             <form onSubmit={this.handleSubmitMusic}>
-                <iframe id ="frame" src="https://embed.spotify.com/?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai" frameborder="0" allowtransparency="true"></iframe>
+                <iframe id ="Spotifyframe" src="https://embed.spotify.com/?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai" frameborder="0" allowtransparency="true"></iframe>
                 <select id = "SearchFor">
                 <option value="Artist">Artist</option>
                 <option value="Album">Album</option>

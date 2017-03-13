@@ -13276,8 +13276,6 @@ var Content = exports.Content = function (_React$Component) {
                     null,
                     'CST 205 - Project 2'
                 ),
-                React.createElement(_Chatroom.Chatroom, { messages: this.state.messages }),
-                React.createElement(_Sound.Sound, null),
                 React.createElement('div', {
                     className: 'fb-login-button',
                     'data-max-rows': '1',
@@ -13286,7 +13284,13 @@ var Content = exports.Content = function (_React$Component) {
                     'data-auto-logout-link': 'true' }),
                 React.createElement('div', { onClick: this.tryToGree,
                     className: 'g-signin2',
-                    'data-theme': 'dark' })
+                    'data-theme': 'dark' }),
+                React.createElement(_Chatroom.Chatroom, { messages: this.state.messages }),
+                React.createElement(
+                    'div',
+                    { className: 'spotifyContainer' },
+                    React.createElement(_Sound.Sound, null)
+                )
             );
         }
     }]);
@@ -30455,7 +30459,7 @@ var Sound = exports.Sound = function (_React$Component) {
 
             _Socket.Socket.on('fromSpotify', function (data) {
                 console.log("hello from spotify");
-                document.getElementById("frame").style.visibility = "visible";
+                document.getElementById("Spotifyframe").style.visibility = "visible";
             });
         }
     }, {
@@ -30486,7 +30490,7 @@ var Sound = exports.Sound = function (_React$Component) {
                 React.createElement(
                     'form',
                     { onSubmit: this.handleSubmitMusic },
-                    React.createElement('iframe', { id: 'frame', src: 'https://embed.spotify.com/?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai', frameborder: '0', allowtransparency: 'true' }),
+                    React.createElement('iframe', { id: 'Spotifyframe', src: 'https://embed.spotify.com/?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai', frameborder: '0', allowtransparency: 'true' }),
                     React.createElement(
                         'select',
                         { id: 'SearchFor' },
