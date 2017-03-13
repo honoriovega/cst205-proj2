@@ -147,8 +147,8 @@ def on_new_number(data):
 def spotify(data):
 	searchType = data['searchType']
 	searchQuery =  data['searchQuery']
-	searchQuery = searchQuery.replace("+", "%20")
-	response = requests.get("https://api.spotify.com/v1/search?q="+searchQuery+"&type="+searchType)
+	searchQuery1 = searchQuery.replace("+", "%20")
+	response = requests.get("https://api.spotify.com/v1/search?q="+searchQuery1+"&type="+searchType)
 	json = response.json()
 	print json
 	
