@@ -16,7 +16,6 @@ export class Button extends React.Component {
         
         // javar webpack is now running
         var referenceToMessage = document.getElementById('msg');
-        // let me push the changes
 		var newMsg = referenceToMessage.value;
 		referenceToMessage.value = "";
 		console.log("tried to send ", newMsg);
