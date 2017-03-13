@@ -30455,6 +30455,7 @@ var Sound = exports.Sound = function (_React$Component) {
 
             _Socket.Socket.on('fromSpotify', function (data) {
                 console.log("hello from spotify");
+                React.createElement('iframe', { src: 'https://embed.spotify.com/?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai', frameborder: '0', allowtransparency: 'true' });
             });
         }
     }, {
@@ -30485,7 +30486,6 @@ var Sound = exports.Sound = function (_React$Component) {
                 React.createElement(
                     'form',
                     { onSubmit: this.handleSubmitMusic },
-                    React.createElement('iframe', { src: 'https://embed.spotify.com/?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai', frameborder: '0', allowtransparency: 'true' }),
                     React.createElement(
                         'select',
                         { id: 'SearchFor' },
