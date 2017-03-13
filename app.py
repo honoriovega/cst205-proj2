@@ -215,7 +215,7 @@ def on_new_msg(data):
 			picture = json['picture']
 			USERNAME = json['name']
 		
-	
+	fetchAndEmit()	
 	
 		url = msg
 		parts = urlparse.urlsplit(url)

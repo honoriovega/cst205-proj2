@@ -16,7 +16,7 @@ export class Chatroom extends React.Component {
     	
     	if(res  === 'jpg' || res === 'png' || res === 'gif')
 			return <img src={link} />;
-		else if(link.slice(len - 4, len) == 'jpeg')
+		else if(link.slice(len - 4, len) === 'jpeg')
 			return <img src={link} />;
 		
 		else if( link.slice(0, 12) === 'http://cache')

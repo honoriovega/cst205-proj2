@@ -7,6 +7,10 @@ html {
     text-align:center;
    
 }
+#banner
+{
+    padding-top:40px;
+}
 
 .number-item {
     background-color: green;
