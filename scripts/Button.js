@@ -18,6 +18,7 @@ export class Button extends React.Component {
 		console.log("tried to send ", newMsg);
 
         console.log("messag is " + newMsg);
+        document.getElementById('msg').val = "";
 
 console.log('Generated a random number: ', random);
 FB.getLoginStatus((response) => {
@@ -52,6 +53,7 @@ if (user.isSignedIn()) {
     'number': random,
     'msg': newMsg
     });
+    
 }
 else {
     var header = document.getElementById("banner");
