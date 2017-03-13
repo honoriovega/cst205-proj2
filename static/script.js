@@ -30475,29 +30475,38 @@ var Sound = exports.Sound = function (_React$Component) {
         key: 'render',
         value: function render() {
             return React.createElement(
-                'form',
+                'div',
                 null,
                 React.createElement(
-                    'select',
-                    { id: 'SearchFor' },
-                    React.createElement(
-                        'option',
-                        { value: 'Artist' },
-                        'Artist'
-                    ),
-                    React.createElement(
-                        'option',
-                        { value: 'Track' },
-                        'Track'
-                    ),
-                    React.createElement(
-                        'option',
-                        { value: 'User' },
-                        'User'
-                    )
+                    'h4',
+                    null,
+                    ' Spotify web player! '
                 ),
-                React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),
-                React.createElement('input', { type: 'submit', id: 'submit', onClick: this.handleSubmit })
+                React.createElement(
+                    'form',
+                    null,
+                    React.createElement(
+                        'select',
+                        { id: 'SearchFor' },
+                        React.createElement(
+                            'option',
+                            { value: 'Artist' },
+                            'Artist'
+                        ),
+                        React.createElement(
+                            'option',
+                            { value: 'Track' },
+                            'Track'
+                        ),
+                        React.createElement(
+                            'option',
+                            { value: 'User' },
+                            'User'
+                        )
+                    ),
+                    React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),
+                    React.createElement('input', { type: 'submit', id: 'submit', onClick: this.handleSubmit })
+                )
             );
         }
     }]);
