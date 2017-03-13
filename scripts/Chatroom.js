@@ -57,11 +57,13 @@ export class Chatroom extends React.Component {
         	
 			
         return (
-			<div>
-				<div id='messageArea'>
+        	<div>
+			<div className='chatroom' >
+				<div id='messageArea' className='msgArea'>
 				{allMessages}
 				</div>
 				<br />
+				</div>
 				<div className='sendMessageArea'>
 				<Button name='Send Message'/>
 				</div>
