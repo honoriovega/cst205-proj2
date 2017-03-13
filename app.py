@@ -151,7 +151,10 @@ def spotify(data):
 	json = response.json()
 	print json
 	
-
+	my_headers = {"Authorization" : "Bearer BQAEw3ogR-7YAcXVkRfJycjHY9PWsIOyGr3mzawOEbrpsThSqeGqJQWGlihbIvaT9ignkrPNJGNDhZVPYH1gciutWys71yo5GipAc6XqLbs45fp3_pYXSm03Cts1utUBZJsfY8wl5IcIKLHV_7y4_OB4HOBJr3wfWLJd-xA9KW8CePYTq6jowLrqGCjtwiTjq_GKwB9gJxqAp5s"}
+	url = "https://api.spotify.com/v1/tracks/1zHlj4dQ8ZAtrayhuDDmkY"
+	track_response = requests.get(url, headers= my_headers)
+	print track_response.json()
 	socketio.emit('fromSpotify', "hello from spotify")
 	
 	
