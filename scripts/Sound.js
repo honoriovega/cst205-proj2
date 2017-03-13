@@ -21,10 +21,10 @@ export class Sound extends React.Component {
     }
     
      handleSubmitMusic(event) {
-         
+         event.preventDefault();
          
          var searchType = document.getElementById('SearchFor').value;
-         var searchQuery = document.getElementById('SearchQuery').value;
+         var searchQuery = document.getElementById('searchQuery').value;
         
         Socket.emit('Spotify' , {
             
@@ -38,7 +38,7 @@ export class Sound extends React.Component {
         return (
         <div>    
             <h4> Spotify web player! </h4>
-            <form onSubmit= {this.handleSubmitMusic}>
+            <form onSubmit={this.handleSubmitMusic}>
                 <select id = "SearchFor">
                 <option value="Artist">Artist</option>
                 <option value="Track" >Track</option>
