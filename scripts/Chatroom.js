@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { Button } from './Button';
 import { Socket } from './Socket';
+import { Sound } from './Sound'
 
 export class Chatroom extends React.Component {
 
@@ -66,6 +67,7 @@ export class Chatroom extends React.Component {
 				<div className='sendMessageArea'>
 				<Button name='Send Message'/>
 				</div>
+				<Sound/>
 			</div>
         );
     }
