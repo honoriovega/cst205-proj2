@@ -215,40 +215,40 @@ def on_new_msg(data):
 			picture = json['picture']
 			USERNAME = json['name']
 		
-	fetchAndEmit()	
+
+
+	url = msg
+	parts = urlparse.urlsplit(url)
 	
-		url = msg
-		parts = urlparse.urlsplit(url)
+	# it is not a url so add it and emit
+	if not parts.scheme or not parts.netloc:  
 		
-		# it is not a url so add it and emit
-		if not parts.scheme or not parts.netloc:  
-			
-			if(len(msg) > 4):
-				if(msg[len(msg) - 3:] in ['edu','com','net','gov','org']):
-					addPictureMessage(picture,USERNAME,'http://' +msg)
-				else:
-					addMessage(picture,USERNAME,  msg)
+		if(len(msg) > 4):
+			if(msg[len(msg) - 3:] in ['edu','com','net','gov','org']):
+				addPictureMessage(picture,USERNAME,'http://' +msg)
 			else:
-				addMessage(picture,USERNAME, msg)
-			
+				addMessage(picture,USERNAME,  msg)
 		else:
-			print "yes an url"
-			addPictureMessage(picture,USERNAME,url)
-			
-		#fetchAndEmit()
+			addMessage(picture,USERNAME, msg)
 		
-		# handle bot command
-		if(msg[:2] == '!!'):
-			response = botcommands.processBotCommand(msg)
-			if(len(response) > 4):
-				if(response[:4] == 'http'):
-					addBotMessageAPI( response )
-				else:
-					addBotMessage(response)
+	else:
+		print "yes an url"
+		addPictureMessage(picture,USERNAME,url)
+		
+	#fetchAndEmit()
+	
+	# handle bot command
+	if(msg[:2] == '!!'):
+		response = botcommands.processBotCommand(msg)
+		if(len(response) > 4):
+			if(response[:4] == 'http'):
+				addBotMessageAPI( response )
 			else:
 				addBotMessage(response)
-			
-			#fetchAndEmit()
+		else:
+			addBotMessage(response)
+		
+		
 		
 
 	fetchAndEmit()
