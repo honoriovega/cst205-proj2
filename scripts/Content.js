@@ -107,10 +107,7 @@ function tryToGreet() {
             
                 <h1>CST 205 - Project 2</h1>
 
-                
                 <Chatroom messages={this.state.messages}/>
-                
-
                 <div className="usersSection">
                 <h2>My name: {this.state['my name']}</h2>
 
