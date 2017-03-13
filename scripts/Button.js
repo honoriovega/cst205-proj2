@@ -15,7 +15,7 @@ export class Button extends React.Component {
         console.log('sahhhh dude : ');
 
 		var newMsg = document.getElementById('msg').value;
-		document.getElementById("msg").value = " ";
+		document.getElementById('msg').value = " ";
 		console.log("tried to send ", newMsg);
 
         console.log("messag is " + newMsg);
