@@ -30415,10 +30415,116 @@ ReactDOM.render(React.createElement(_Content.Content, null), document.getElement
 
 /***/ }),
 /* 238 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-throw new Error("Module build failed: SyntaxError: Identifier directly after number (43:175)\n\n\u001b[0m \u001b[90m 41 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33mh4\u001b[39m\u001b[33m>\u001b[39m \u001b[33mSpotify\u001b[39m web player\u001b[33m!\u001b[39m \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mh4\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 42 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33mform\u001b[39m onSubmit\u001b[33m=\u001b[39m{\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhandleSubmitMusic}\u001b[33m>\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33miframe\u001b[39m id \u001b[33m=\u001b[39m\u001b[32m\"Spotifyframe\"\u001b[39m src\u001b[33m=\u001b[39m\u001b[32m\"https://embed.spotify.com/?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai\"\u001b[39m frameborder\u001b[33m=\u001b[39m\u001b[32m\"0\"\u001b[39m allowtransparency\u001b[33m=\u001b[39m\u001b[32m\"true\"\u001b[39m style\u001b[33m=\u001b[39m\u001b[32m\"height=\"\u001b[39m\u001b[35m80\u001b[39mpx\u001b[32m\" style=\"\u001b[39mwidth\u001b[33m=\u001b[39m\u001b[35m250\u001b[39mpx\u001b[32m\"></iframe>\u001b[39m\n \u001b[90m    | \u001b[39m                                                                                                                                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33mselect\u001b[39m id \u001b[33m=\u001b[39m \u001b[32m\"SearchFor\"\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 45 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33moption\u001b[39m value\u001b[33m=\u001b[39m\u001b[32m\"Artist\"\u001b[39m\u001b[33m>\u001b[39m\u001b[33mArtist\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33moption\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 46 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33moption\u001b[39m value\u001b[33m=\u001b[39m\u001b[32m\"Album\"\u001b[39m\u001b[33m>\u001b[39m\u001b[33mAlbum\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33moption\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Sound = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(30);
+
+var React = _interopRequireWildcard(_react);
+
+var _Socket = __webpack_require__(39);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Sound = exports.Sound = function (_React$Component) {
+    _inherits(Sound, _React$Component);
+
+    function Sound(props) {
+        _classCallCheck(this, Sound);
+
+        var _this = _possibleConstructorReturn(this, (Sound.__proto__ || Object.getPrototypeOf(Sound)).call(this, props));
+
+        _this.state = {};
+        return _this;
+    }
+
+    _createClass(Sound, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+
+            _Socket.Socket.on('fromSpotify', function (data) {
+                console.log("hello from spotify");
+                document.getElementById("Spotifyframe").style.visibility = "visible";
+            });
+        }
+    }, {
+        key: 'handleSubmitMusic',
+        value: function handleSubmitMusic(event) {
+            event.preventDefault();
+
+            var searchType = document.getElementById('SearchFor').value;
+            var searchQuery = document.getElementById('searchQuery').value;
+
+            _Socket.Socket.emit('Spotify', {
+
+                'searchType': searchType,
+                'searchQuery': searchQuery
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'div',
+                null,
+                React.createElement(
+                    'h4',
+                    null,
+                    ' Spotify web player! '
+                ),
+                React.createElement(
+                    'form',
+                    { onSubmit: this.handleSubmitMusic },
+                    React.createElement('iframe', { id: 'Spotifyframe', src: 'https://embed.spotify.com/?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai', frameborder: '0', allowtransparency: 'true' }),
+                    React.createElement(
+                        'select',
+                        { id: 'SearchFor' },
+                        React.createElement(
+                            'option',
+                            { value: 'Artist' },
+                            'Artist'
+                        ),
+                        React.createElement(
+                            'option',
+                            { value: 'Album' },
+                            'Album'
+                        ),
+                        React.createElement(
+                            'option',
+                            { value: 'Track' },
+                            'Track'
+                        ),
+                        React.createElement(
+                            'option',
+                            { value: 'User' },
+                            'User'
+                        )
+                    ),
+                    React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),
+                    React.createElement('input', { type: 'submit', id: 'submit' })
+                ),
+                React.createElement('div', null)
+            );
+        }
+    }]);
+
+    return Sound;
+}(React.Component);
 
 /***/ })
 /******/ ]);

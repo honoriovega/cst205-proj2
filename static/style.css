@@ -58,5 +58,7 @@ img {
     height:250px;
 }
 #Spotifyframe {
+    height:80px;
+    width:240px;
     visibility:hidden
 }
