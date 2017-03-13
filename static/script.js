@@ -13351,7 +13351,7 @@ var Chatroom = exports.Chatroom = function (_React$Component) {
 			var len = link.length;
 			var res = link.slice(len - 3, len);
 
-			if (res === 'jpg' || res === 'png' || res === 'gif') return React.createElement('img', { src: link });else if (link.slice(len - 4, len) == 'jpeg') return React.createElement('img', { src: link });else if (link.slice(0, 12) === 'http://cache') return React.createElement('img', { src: link });else if (link.includes('youtube.com')) {
+			if (res === 'jpg' || res === 'png' || res === 'gif') return React.createElement('img', { src: link });else if (link.slice(len - 4, len) == 'jpeg') return React.createElement('img', { src: link });else if (link.slice(0, 12) === 'http://cache') return React.createElement('img', { src: link });else if (link.includes('youtube.')) {
 
 				var res = link.split("=");
 
