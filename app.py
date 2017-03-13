@@ -86,7 +86,7 @@ def addPictureMessage(userPicture, name, apiLink):
 	
 @app.route('/')
 def hello():
-	a = gettyApi.getImages('background')
+	a = gettyApi.initBackground('background')
 
 	return flask.render_template('index.html',back=a)
 
