@@ -37,6 +37,13 @@ html {
     
 }
 
+.msgArea .img{
+  width: 60px;
+  height: 60px;
+  background: #ccc;
+  border-radius: 50%;
+
+}
 .msgArea
 {
    	background-color:white;
