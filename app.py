@@ -162,7 +162,9 @@ def spotify(data):
 	spotify_links = track_response.json()
 	print spotify_links
 	random_track = random.choice(tracks)
-	socketio.emit('fromSpotify', random_track)
+	
+	random_track_link = "https://embed.spotify.com/?uri="+random_track
+	socketio.emit('fromSpotify', random_track_link)
 	
 	
 	
