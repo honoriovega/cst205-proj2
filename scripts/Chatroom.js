@@ -9,6 +9,9 @@ export class Chatroom extends React.Component {
 		 handleLink(link)		
 		{ 
 			console.log("checcking if url");
+			
+			var c = link.replace(/\s/g,'');
+			link = c;
 			// empty string do nothing
 		    if(link === '')
 		    	return;
