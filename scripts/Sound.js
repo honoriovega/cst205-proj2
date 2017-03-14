@@ -5,6 +5,7 @@ export class Sound extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            track : " "
 			
         };
     }
@@ -16,7 +17,7 @@ export class Sound extends React.Component {
     
     Socket.on('fromSpotify' ,(data) =>{
         console.log("hello from spotify");
-        console.log(data);
+        this.props.track = (data);
         document.getElementById("Spotifyframe").style.visibility ="visible"
         
     });
@@ -41,7 +42,7 @@ export class Sound extends React.Component {
         <div>    
             <h4> Spotify web player! </h4>
             <form onSubmit={this.handleSubmitMusic}>
-                <iframe id ="Spotifyframe" src="https://embed.spotify.com/?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai" frameborder="0" allowtransparency="true"></iframe>
+                <iframe id ="Spotifyframe" src="https://embed.spotify.com/?uri={this.props.track}"frameborder="0" allowtransparency="true"></iframe>
                 <select id = "SearchFor">
                 <option value="Artist">Artist</option>
                 <option value="Album">Album</option>
