@@ -205,7 +205,7 @@ def on_new_msg(data):
 	msg = data['msg']
 	USERNAME =  ''
 	picture =  ''
-	
+	msg = msg.strip()
 	if(data['google_user_token'] == '' and data['facebook_user_token'] == '' ):
 		send('received message')
 	
