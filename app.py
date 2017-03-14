@@ -150,6 +150,7 @@ def spotify(data):
 	searchQuery1 = searchQuery.replace("+", "%20")
 	response = requests.get("https://api.spotify.com/v1/search?q="+searchQuery1+"&type="+searchType)
 	json = response.json()
+	print json
 	idholder =  []
 	idholder = [URI['uri'] for URI in json['uri'] ]
 	print idholder
