@@ -150,10 +150,7 @@ def spotify(data):
 	searchQuery1 = searchQuery.replace("+", "%20")
 	response = requests.get("https://api.spotify.com/v1/search?q="+searchQuery1+"&type="+searchType)
 	json = response.json()
-	print json[0]['items']['uri']
-	idholder =  []
-	idholder = [URI['uri'] for URI in json['uri'] ]
-	print idholder
+	print json
 	
 	my_headers = {"Accept" : "application/json", "Authorization" : "Bearer BQAEw3ogR-7YAcXVkRfJycjHY9PWsIOyGr3mzawOEbrpsThSqeGqJQWGlihbIvaT9ignkrPNJGNDhZVPYH1gciutWys71yo5GipAc6XqLbs45fp3_pYXSm03Cts1utUBZJsfY8wl5IcIKLHV_7y4_OB4HOBJr3wfWLJd-xA9KW8CePYTq6jowLrqGCjtwiTjq_GKwB9gJxqAp5s"}
 	url = "https://api.spotify.com/v1/tracks/1zHlj4dQ8ZAtrayhuDDmkY"
