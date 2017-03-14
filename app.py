@@ -155,7 +155,7 @@ def spotify(data):
     			for url in item.get('uri', ()):
     				print url
         	
-	my_headers = {"Accept" : "application/json", "Authorization" : "Bearer BQAEw3ogR-7YAcXVkRfJycjHY9PWsIOyGr3mzawOEbrpsThSqeGqJQWGlihbIvaT9ignkrPNJGNDhZVPYH1gciutWys71yo5GipAc6XqLbs45fp3_pYXSm03Cts1utUBZJsfY8wl5IcIKLHV_7y4_OB4HOBJr3wfWLJd-xA9KW8CePYTq6jowLrqGCjtwiTjq_GKwB9gJxqAp5s"}
+	my_headers = {"Accept" : "application/json", "Authorization" : "Bearer BQCm9bzjiDxNb9FurI8AWVgraOhvdZyzpBBNq753DwEXocrLa8kyPNOalfXuevtiZ10Kt8FIuvM1RMnv6mWiVsz9bXU8VQzEv3xdHAE5Qs4-eFI4dh3spBArHnzQLl6gGqvddte-H7JZQVzJEsxobx1TSStfVqonFzxWdH418b5RtzgZMHFgnKtV-6qW9g_axQ1bKwQ4Fm8e1NI"}
 	url = "https://api.spotify.com/v1/tracks/1zHlj4dQ8ZAtrayhuDDmkY"
 	track_response = requests.get(url, headers= my_headers)
 	spotify_links = track_response.json()
