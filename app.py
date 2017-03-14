@@ -151,7 +151,7 @@ def spotify(data):
 	response = requests.get("https://api.spotify.com/v1/search?q="+searchQuery1+"&type="+searchType)
 	json = response.json()
 	if 'tracks' in json and 'items' in json['tracks']:
-		for item in json['tracks']['items']['uri']:
+		for item in json['tracks']['items'][0]['uri']:
 			print item
     			
         	
