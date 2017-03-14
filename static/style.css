@@ -42,8 +42,6 @@ html {
   height: 60px;
   background: #ccc;
   border-radius: 50%;
-  color:orange;
-  
 
 }
 .msgArea
@@ -57,6 +55,9 @@ html {
 	opacity: 0.8;
 	overflow-y:scroll;
 	background-color: #ffffff;
+}
+#msgtext{
+    color:orange;
 }
 
 p

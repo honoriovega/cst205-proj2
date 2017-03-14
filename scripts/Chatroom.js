@@ -62,9 +62,8 @@ export class Chatroom extends React.Component {
                  let allMessages = this.props.messages.map( (msg) =>
             <p >
             <img id="photo" style={{width : 100, height: 100, paddingLeft:10}}src={msg.picture} /> {this.handleName(msg.name)}: &nbsp;
-            {msg.msg}
-            {this.handleLink(msg.link)}
-        	</p>	);
+            <p id="msgtext" >{msg.msg}</p>
+            {this.handleLink(msg.link)});
         	
 			
         return (
