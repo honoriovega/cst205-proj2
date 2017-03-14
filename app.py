@@ -239,7 +239,14 @@ def on_new_msg(data):
 		else:
 			addMessage(picture,USERNAME, msg)
 		"""
-		addMessage(picture,USERNAME, msg)
+		
+		if('!! say' in msg):
+			x = 10
+		else:
+			addMessage(picture,USERNAME, msg)
+		
+		
+		
 	else:
 		print "yes an url"
 		addPictureMessage(picture,USERNAME,url)
