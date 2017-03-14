@@ -59,7 +59,7 @@ export class Chatroom extends React.Component {
 				var x = "/static/BOT.jpg";	
                  let allMessages = this.props.messages.map( (msg) =>
             <p >
-            <img style={{width : 100, height: 100}}src={msg.picture} /> {this.handleName(msg.name)}: &nbsp;
+            <img id="photo" style={{width : 100, height: 100}}src={msg.picture} /> {this.handleName(msg.name)}: &nbsp;
             <p id="msgtext">{msg.msg}</p>
             {this.handleLink(msg.link)}
         	</p>	);

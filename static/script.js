@@ -13504,7 +13504,7 @@ var Chatroom = exports.Chatroom = function (_React$Component) {
 				return React.createElement(
 					'p',
 					null,
-					React.createElement('img', { style: { width: 100, height: 100 }, src: msg.picture }),
+					React.createElement('img', { id: 'photo', style: { width: 100, height: 100 }, src: msg.picture }),
 					' ',
 					_this2.handleName(msg.name),
 					': \xA0',
