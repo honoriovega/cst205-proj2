@@ -161,7 +161,7 @@ def spotify(data):
 	track_response = requests.get(url, headers= my_headers)
 	spotify_links = track_response.json()
 	print spotify_links
-	random_track = random.choice(spotify_links)
+	random_track = random.choice(tracks)
 	socketio.emit('fromSpotify', random_track)
 	
 	
