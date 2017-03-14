@@ -7,7 +7,8 @@ import { Sound } from './Sound'
 export class Chatroom extends React.Component {
 
 		 handleLink(link)		
-		{
+		{ 
+			console.log("checcking if url");
 			// empty string do nothing
 		    if(link === '')
 		    	return;
