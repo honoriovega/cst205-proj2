@@ -230,7 +230,7 @@ def on_new_msg(data):
 	
 	# it is not a url so add it and emit
 	if not parts.scheme or not parts.netloc:  
-		
+		"""
 		if(len(msg) > 4):
 			if(msg[len(msg) - 3:] in ['edu','com','net','gov','org']):
 				addPictureMessage(picture,USERNAME,'http://' +msg)
@@ -238,7 +238,8 @@ def on_new_msg(data):
 				addMessage(picture,USERNAME,  msg)
 		else:
 			addMessage(picture,USERNAME, msg)
-		
+		"""
+		addMessage(picture,USERNAME, msg)
 	else:
 		print "yes an url"
 		addPictureMessage(picture,USERNAME,url)
