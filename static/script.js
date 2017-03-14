@@ -30462,6 +30462,7 @@ var Sound = exports.Sound = function (_React$Component) {
 
             _Socket.Socket.on('fromSpotify', function (data) {
                 console.log("hello from spotify");
+                console.log(data);
                 document.getElementById("Spotifyframe").style.visibility = "visible";
             });
         }

@@ -145,6 +145,7 @@ def on_new_number(data):
 	
 @socketio.on('Spotify')
 def spotify(data):
+	tracks =[]
 	searchType = data['searchType']
 	searchQuery =  data['searchQuery']
 	searchQuery1 = searchQuery.replace("+", "%20")
@@ -153,14 +154,15 @@ def spotify(data):
 	if 'tracks' in json and 'items' in json['tracks']:
 		for item in json['tracks']['items']:
 			print item['uri']
-    			
+    		tracks.append(item['uri'])
         	
 	my_headers = {"Accept" : "application/json", "Authorization" : "Bearer BQCm9bzjiDxNb9FurI8AWVgraOhvdZyzpBBNq753DwEXocrLa8kyPNOalfXuevtiZ10Kt8FIuvM1RMnv6mWiVsz9bXU8VQzEv3xdHAE5Qs4-eFI4dh3spBArHnzQLl6gGqvddte-H7JZQVzJEsxobx1TSStfVqonFzxWdH418b5RtzgZMHFgnKtV-6qW9g_axQ1bKwQ4Fm8e1NI"}
 	url = "https://api.spotify.com/v1/tracks/1zHlj4dQ8ZAtrayhuDDmkY"
 	track_response = requests.get(url, headers= my_headers)
 	spotify_links = track_response.json()
 	print spotify_links
-	socketio.emit('fromSpotify', "hello from spotify")
+	random_track = random.choice(spotify_links)
+	socketio.emit('fromSpotify', random_track)
 	
 	
 	
