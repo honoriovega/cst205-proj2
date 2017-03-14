@@ -13503,16 +13503,12 @@ var Chatroom = exports.Chatroom = function (_React$Component) {
 			var allMessages = this.props.messages.map(function (msg) {
 				return React.createElement(
 					'p',
-					null,
+					{ id: 'msgtext' },
 					React.createElement('img', { id: 'photo', style: { width: 100, height: 100 }, src: msg.picture }),
 					' ',
 					_this2.handleName(msg.name),
 					': \xA0',
-					React.createElement(
-						'p',
-						{ id: 'msgtext' },
-						msg.msg
-					),
+					msg.msg,
 					_this2.handleLink(msg.link)
 				);
 			});
