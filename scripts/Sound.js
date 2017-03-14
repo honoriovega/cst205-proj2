@@ -20,19 +20,15 @@ export class Sound extends React.Component {
         this.setState({
             'track' : data 
             });
-        document.getElementById("Spotifyframe").style.visibility ="visible"
-        
+        document.getElementById("Spotifyframe").style.visibility ="visible";
     });
     }
     
      handleSubmitMusic(event) {
          event.preventDefault();
-         
          var searchType = document.getElementById('SearchFor').value;
          var searchQuery = document.getElementById('searchQuery').value;
-        
         Socket.emit('Spotify' , {
-            
             'searchType' : searchType, 
             'searchQuery' : searchQuery,
         });

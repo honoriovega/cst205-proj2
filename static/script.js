@@ -30476,12 +30476,9 @@ var Sound = exports.Sound = function (_React$Component) {
         key: 'handleSubmitMusic',
         value: function handleSubmitMusic(event) {
             event.preventDefault();
-
             var searchType = document.getElementById('SearchFor').value;
             var searchQuery = document.getElementById('searchQuery').value;
-
             _Socket.Socket.emit('Spotify', {
-
                 'searchType': searchType,
                 'searchQuery': searchQuery
             });
