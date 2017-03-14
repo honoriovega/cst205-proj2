@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { Button } from './Button';
 import { Socket } from './Socket';
-import { Sound } from './Sound'
 
 export class Chatroom extends React.Component {
 
@@ -21,7 +20,7 @@ export class Chatroom extends React.Component {
     	
     	if(res  === 'jpg' || res === 'png' || res === 'gif')
 			return <img src={link} />;
-		else if(link.slice(len - 4, len) === 'jpeg')
+		else if(link.slice(len - 4, len) == 'jpeg')
 			return <img src={link} />;
 		
 		else if( link.slice(0, 12) === 'http://cache')
@@ -32,13 +31,12 @@ export class Chatroom extends React.Component {
 			 return <img src={link} />;
 		}
 		
-		else if( link.includes('youtube.')) {
+		else if( link.includes('youtube.com')) {
 			
 			
     		var res = link.split("=");
 			
 			var ytlink = "https://www.youtube.com/embed/" + res[1];
-			console.log(" iran bruh");
 			return <iframe width="560" height="315" src={ytlink } ></iframe>;
 		}
 		else
@@ -61,9 +59,10 @@ export class Chatroom extends React.Component {
 				var x = "/static/BOT.jpg";	
                  let allMessages = this.props.messages.map( (msg) =>
             <p >
-            <img id="photo" style={{width : 100, height: 100, paddingLeft:10}}src={msg.picture} /> {this.handleName(msg.name)}: &nbsp;
-            <p id="msgtext" >{msg.msg}</p>
-            {this.handleLink(msg.link)});
+            <img style={{width : 100, height: 100}}src={msg.picture} /> {this.handleName(msg.name)}: &nbsp;
+            <p id="msgtext">{msg.msg}</p>
+            {this.handleLink(msg.link)}
+        	</p>	);
         	
 			
         return (
@@ -74,8 +73,6 @@ export class Chatroom extends React.Component {
 				<br />
 				<div className='sendMessageArea'>
 				<Button name='Send Message'/>
-				</div>
-				<div>
 				</div>
 			</div>
         );
