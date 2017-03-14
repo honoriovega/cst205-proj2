@@ -17,7 +17,9 @@ export class Sound extends React.Component {
     
     Socket.on('fromSpotify' ,(data) =>{
         console.log("hello from spotify");
-        this.props.track = (data);
+        this.setState({
+            'track' : data 
+            });
         document.getElementById("Spotifyframe").style.visibility ="visible"
         
     });
