@@ -150,8 +150,11 @@ def spotify(data):
 	searchQuery1 = searchQuery.replace("+", "%20")
 	response = requests.get("https://api.spotify.com/v1/search?q="+searchQuery1+"&type="+searchType)
 	json = response.json()
-	print json
-	
+	if 'tracks' in json and 'items' in json['tracks']:
+		for item in json['tracks']['items']:
+    			for url in item.get('uri', ()):
+    				print url
+        	
 	my_headers = {"Accept" : "application/json", "Authorization" : "Bearer BQAEw3ogR-7YAcXVkRfJycjHY9PWsIOyGr3mzawOEbrpsThSqeGqJQWGlihbIvaT9ignkrPNJGNDhZVPYH1gciutWys71yo5GipAc6XqLbs45fp3_pYXSm03Cts1utUBZJsfY8wl5IcIKLHV_7y4_OB4HOBJr3wfWLJd-xA9KW8CePYTq6jowLrqGCjtwiTjq_GKwB9gJxqAp5s"}
 	url = "https://api.spotify.com/v1/tracks/1zHlj4dQ8ZAtrayhuDDmkY"
 	track_response = requests.get(url, headers= my_headers)
