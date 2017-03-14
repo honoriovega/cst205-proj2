@@ -86,7 +86,7 @@ def addPictureMessage(userPicture, name, apiLink):
 	
 @app.route('/')
 def hello():
-	keywords = ['technology','beach','forest','background']
+	keywords = ['technology','forest','background']
 	a = gettyApi.initBackground(choice(keywords))
 
 	return flask.render_template('index.html',back=a)
