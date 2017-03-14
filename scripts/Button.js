@@ -76,10 +76,15 @@ else {
 
     render() {
         return (
+            <div>
             <form onSubmit={this.handleSubmit}>
-				 <input type = "text" class="enjoy-css" id = 'msg' name='lname'/>
+            <div className ="enjoy-css">
+				 <input type = "text" id = "msg" name="lname"/>
+			</div>
                 <button>{this.props.name}</button>
             </form>
+            </div>
+         
         );
     }
 }

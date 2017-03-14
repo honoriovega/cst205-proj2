@@ -8788,13 +8788,21 @@ var Button = exports.Button = function (_React$Component) {
         key: 'render',
         value: function render() {
             return React.createElement(
-                'form',
-                { onSubmit: this.handleSubmit },
-                React.createElement('input', { type: 'text', 'class': 'enjoy-css', id: 'msg', name: 'lname' }),
+                'div',
+                null,
                 React.createElement(
-                    'button',
-                    null,
-                    this.props.name
+                    'form',
+                    { onSubmit: this.handleSubmit },
+                    React.createElement(
+                        'div',
+                        { className: 'enjoy-css' },
+                        React.createElement('input', { type: 'text', id: 'msg', name: 'lname' })
+                    ),
+                    React.createElement(
+                        'button',
+                        null,
+                        this.props.name
+                    )
                 )
             );
         }
