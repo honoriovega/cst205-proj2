@@ -77,7 +77,8 @@ else {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-				 <input type="text" id='msg' name="lname" /><br />
+				 <input type = "text" class="enjoy-css" id = 'msg' name='lname'/>
+		
                 <button>{this.props.name}</button>
             </form>
         );

@@ -8790,8 +8790,7 @@ var Button = exports.Button = function (_React$Component) {
             return React.createElement(
                 'form',
                 { onSubmit: this.handleSubmit },
-                React.createElement('input', { type: 'text', id: 'msg', name: 'lname' }),
-                React.createElement('br', null),
+                React.createElement('input', { type: 'text', 'class': 'enjoy-css', id: 'msg', name: 'lname' }),
                 React.createElement(
                     'button',
                     null,
