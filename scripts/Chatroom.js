@@ -23,6 +23,11 @@ export class Chatroom extends React.Component {
 		else if( link.slice(0, 12) === 'http://cache')
 			return <img src={link} />;
 		
+		else if(link.includes('getty')) {
+			
+			 return <img src={link} />;
+		}
+		
 		else if( link.includes('youtube.')) {
 			
 			

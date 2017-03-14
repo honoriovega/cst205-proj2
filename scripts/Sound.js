@@ -38,7 +38,7 @@ export class Sound extends React.Component {
       render() {
         return (
         <div>    
-            <h4> Spotify web player! </h4>
+            
             <form onSubmit={this.handleSubmitMusic}>
                 <iframe id ="Spotifyframe" src={this.state.track} frameborder="0" allowtransparency="true"></iframe>
                 <select id = "SearchFor">
