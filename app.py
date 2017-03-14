@@ -90,9 +90,10 @@ def hello():
 	a = gettyApi.initBackground(choice(keywords))
 
 	return flask.render_template('index.html',back=a)
-"""
+
 @socketio.on('connect')
 def on_connect():
+	"""
 	name = random.randrange(1000, 9999)
 
 	flask_socketio.emit(
@@ -116,9 +117,9 @@ def on_connect():
 	
 	greet = "Welcome to the chatroom new user. Type !! help to view list of commands"
 	addBotMessage(greet)
-
+	"""
 	fetchAndEmit()
-"""
+
 
 @socketio.on('new number')
 def on_new_number(data):
