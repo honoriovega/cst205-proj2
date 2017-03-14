@@ -13279,6 +13279,11 @@ var Content = exports.Content = function (_React$Component) {
                     null,
                     'CST 205 - Project 2'
                 ),
+                React.createElement(
+                    'div',
+                    { className: 'spotifyContainer' },
+                    React.createElement(_Sound.Sound, null)
+                ),
                 React.createElement('div', {
                     className: 'fb-login-button',
                     'data-max-rows': '1',
@@ -13288,12 +13293,7 @@ var Content = exports.Content = function (_React$Component) {
                 React.createElement('div', { onClick: this.tryToGree,
                     className: 'g-signin2',
                     'data-theme': 'dark' }),
-                React.createElement(_Chatroom.Chatroom, { messages: this.state.messages }),
-                React.createElement(
-                    'div',
-                    { className: 'spotifyContainer' },
-                    React.createElement(_Sound.Sound, null)
-                )
+                React.createElement(_Chatroom.Chatroom, { messages: this.state.messages })
             );
         }
     }]);
@@ -30503,23 +30503,8 @@ var Sound = exports.Sound = function (_React$Component) {
                         { id: 'SearchFor' },
                         React.createElement(
                             'option',
-                            { value: 'Artist' },
-                            'Artist'
-                        ),
-                        React.createElement(
-                            'option',
-                            { value: 'Album' },
-                            'Album'
-                        ),
-                        React.createElement(
-                            'option',
                             { value: 'Track' },
                             'Track'
-                        ),
-                        React.createElement(
-                            'option',
-                            { value: 'User' },
-                            'User'
                         )
                     ),
                     React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),

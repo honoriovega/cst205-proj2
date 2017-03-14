@@ -107,6 +107,9 @@ function tryToGreet() {
             <div>
             
                 <h1>CST 205 - Project 2</h1>
+                      <div className = "spotifyContainer">
+                <Sound/>
+           </div>
 
  <div
 className="fb-login-button"
@@ -122,9 +125,7 @@ data-auto-logout-link="true">
 
 
                 <Chatroom messages={this.state.messages}/>
-                <div className = "spotifyContainer">
-                <Sound/>
-           </div>
+          
 
                 
             </div>
