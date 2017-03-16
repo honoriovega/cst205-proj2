@@ -115,15 +115,16 @@ data-size="medium"
 data-show-faces="false"
 data-auto-logout-link="true">
 </div>
-                  <div className = "spotifyContainer">
-                <Sound/>
-           </div>
 <div>
                 <div onClick={this.tryToGree}
                 className="g-signin2"
                 data-theme="dark">
                 </div>
                 <Chatroom messages={this.state.messages}/>
+                
+                  <div className = "spotifyContainer">
+                <Sound/>
+           </div>
             </div>
         
            </div>
