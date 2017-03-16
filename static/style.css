@@ -91,9 +91,7 @@ img {
     visibility:hidden
 }
 #Spotifyframe , h4 {
-    height:330px;
-    width:302px;
     position: absolute;
-    top:220;
+    top:190;
     right: 198;
 }
