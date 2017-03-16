@@ -92,6 +92,11 @@ img {
 }
 #Spotifyframe , h4 {
     position: absolute;
-    top:190;
+    top:150;
     right: 198;
+}
+h4 {
+    
+    font-size: 30px;
+    
 }
