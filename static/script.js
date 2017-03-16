@@ -13517,7 +13517,7 @@ var Sound = exports.Sound = function (_React$Component) {
                     null,
                     React.createElement('br', null),
                     React.createElement(
-                        'h4',
+                        'p',
                         null,
                         ' Group music player '
                     ),
