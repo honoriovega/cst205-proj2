@@ -91,13 +91,6 @@ img {
     visibility: hidden
         
 }
-#spotifyText {
-    font-family: Verdana;
-font-size: 20px;
-color: black;
--webkit-text-fill-color: white; /* keeping text visible on any background */
--webkit-text-stroke-width: 3px;
--webkit-text-stroke-color: black;
-}
+
 
 
