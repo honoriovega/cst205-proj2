@@ -13286,11 +13286,6 @@ var Content = exports.Content = function (_React$Component) {
                     null,
                     'CST 205 - Project 2'
                 ),
-                React.createElement(
-                    'div',
-                    { className: 'spotifyContainer' },
-                    React.createElement(_Sound.Sound, null)
-                ),
                 React.createElement('div', {
                     className: 'fb-login-button',
                     'data-max-rows': '1',
@@ -13300,7 +13295,12 @@ var Content = exports.Content = function (_React$Component) {
                 React.createElement('div', { onClick: this.tryToGree,
                     className: 'g-signin2',
                     'data-theme': 'dark' }),
-                React.createElement(_Chatroom.Chatroom, { messages: this.state.messages })
+                React.createElement(_Chatroom.Chatroom, { messages: this.state.messages }),
+                React.createElement(
+                    'div',
+                    { className: 'spotifyContainer' },
+                    React.createElement(_Sound.Sound, null)
+                )
             );
         }
     }]);
