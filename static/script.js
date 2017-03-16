@@ -13304,14 +13304,9 @@ var Content = exports.Content = function (_React$Component) {
                     'div',
                     { className: 'spotifyContainer' },
                     React.createElement(
-                        'h4',
+                        'p',
                         null,
-                        React.createElement(
-                            'small',
-                            null,
-                            ' Group music player'
-                        ),
-                        ' '
+                        ' Group music player '
                     ),
                     React.createElement(_Sound.Sound, null)
                 )
