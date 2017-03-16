@@ -13292,10 +13292,14 @@ var Content = exports.Content = function (_React$Component) {
                     'data-size': 'medium',
                     'data-show-faces': 'false',
                     'data-auto-logout-link': 'true' }),
-                React.createElement('div', { onClick: this.tryToGree,
-                    className: 'g-signin2',
-                    'data-theme': 'dark' }),
-                React.createElement(_Chatroom.Chatroom, { messages: this.state.messages }),
+                React.createElement(
+                    'div',
+                    null,
+                    React.createElement('div', { onClick: this.tryToGree,
+                        className: 'g-signin2',
+                        'data-theme': 'dark' }),
+                    React.createElement(_Chatroom.Chatroom, { messages: this.state.messages })
+                ),
                 React.createElement(
                     'div',
                     { className: 'spotifyContainer' },
