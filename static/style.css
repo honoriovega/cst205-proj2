@@ -96,4 +96,7 @@ img {
     right: 198;
      font-size: 30px;
 }
+small { 
+    font-size: smaller;
+}
 
