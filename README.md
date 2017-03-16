@@ -6,6 +6,10 @@
 you can authenticate with either facebook or google. 
 
 ## github repo <a href="https://github.com/honoriovega/cst205-proj2">https://github.com/honoriovega/cst205-proj2</a>
+### <b> Note about github </b> We used one cloud 9 workspace. So all the pushes / commits show under Honorio's name since he created the repo. However, 
+we all contributed commited files and pushed them to github.
+
+
 ## Project Desciption
 
 
@@ -20,6 +24,7 @@ with implementing socketio video chat with the python backend and client side in
 ## Who worked on what? 
 ### Javar and Honorio worked on server side, setting up the chat functionality and bot commands, ReactJS, and Spotify integration. 
 ### Antonio focused more on client side views (CSS). 
+
 
 
 
