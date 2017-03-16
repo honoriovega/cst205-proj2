@@ -4570,6 +4570,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 var Socket = exports.Socket = SocketIO.connect();
 
+//here were importing the client side sockeio. this is what enables our client server interaction.
+
 /***/ }),
 /* 32 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8718,6 +8720,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+//Filename: Button.js
+//authors Javar A, Honorio V. Antonio V. We all worked on this together. 
+//making buttons here that deal with sending message data from the client to the server. 
 var Button = exports.Button = function (_React$Component) {
     _inherits(Button, _React$Component);
 
@@ -8736,17 +8741,15 @@ var Button = exports.Button = function (_React$Component) {
             console.log('bruh i made a new number : ', random);
             console.log('sahhhh dude : ');
 
-            // javar webpack is now running
+            // grabbing the contents of the textbox and storing them
             var referenceToMessage = document.getElementById('msg');
             var newMsg = referenceToMessage.value;
             referenceToMessage.value = "";
-            console.log("tried to send ", newMsg);
 
-            console.log("messag is " + newMsg);
-
+            //resetting the value of the textbox.    
             document.getElementById('msg').value = " ";
 
-            console.log('Generated a random number: ', random);
+            //before sending the message, checking to see if the user is authenticated
             FB.getLoginStatus(function (response) {
                 if (response.status == 'connected') {
 
@@ -8775,10 +8778,12 @@ var Button = exports.Button = function (_React$Component) {
                             'number': random,
                             'msg': newMsg
                         });
-                    } else {
-                        var header = document.getElementById("banner");
-                        header.innerHTML = "You must be logged in to message!";
                     }
+                    //letting the user know to sign in when attempting to send a message without being authenticated
+                    else {
+                            var header = document.getElementById("banner");
+                            header.innerHTML = "You must be logged in to message!";
+                        }
                 }
             });
 
@@ -13189,7 +13194,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //Content.JS
+//Authors Honorio V. & Javar Alexander - Worked on this together
+//this is the file that takes in user messages from the server 
 
 var Content = exports.Content = function (_React$Component) {
     _inherits(Content, _React$Component);
@@ -13223,7 +13230,7 @@ var Content = exports.Content = function (_React$Component) {
                 FB.getLoginStatus(function (response) {
                     if (response.status == 'connected') {
 
-                        console.log("facbook user is logged in");
+                        //here were checking to see if the user is connected via fb or google, if so we send their respective oAuth token to the server
                         _Socket.Socket.emit('greet user', {
                             'google_user_token': '',
                             'facebook_user_token': response.authResponse.accessToken
@@ -13243,6 +13250,7 @@ var Content = exports.Content = function (_React$Component) {
                 });
             }
 
+            //here were grabbing all messages send into the chat room and storing them in messages
             _Socket.Socket.on('all messages', function (data) {
                 _this2.setState({
                     'messages': data['messages']
@@ -13258,6 +13266,7 @@ var Content = exports.Content = function (_React$Component) {
                     'my name': data['name']
                 });
             });
+            //this was susposed to display a whole list of users, but is broken
             _Socket.Socket.on('list of all users', function (data) {
                 console.log('Got a list of all users from the server:', data);
                 _this2.setState({
@@ -13277,6 +13286,7 @@ var Content = exports.Content = function (_React$Component) {
                     user
                 );
             });
+            //rendering buttons and the spotify container
 
             return React.createElement(
                 'div',
@@ -13350,8 +13360,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Course : CST205
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Title : index.html
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Authors: Honorio Vega, Javar Alexander
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Abstract : Client side code to display the messages. 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Date : 03/15/2017
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Who worked on what: Honorio wrote the handleLink function.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
 
+//authors  Honorio V.
+
+//this class checks links to see if their urls. If they are then we break them up by general urls, image urls, and youtube urls and display them approaitely
 var Chatroom = exports.Chatroom = function (_React$Component) {
 	_inherits(Chatroom, _React$Component);
 
@@ -13467,7 +13488,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //Written by Javar A. code sets up our view for spotify, and allows it to talk to our backend sockets. 
+
 
 var Sound = exports.Sound = function (_React$Component) {
     _inherits(Sound, _React$Component);
@@ -13482,6 +13504,8 @@ var Sound = exports.Sound = function (_React$Component) {
         };
         return _this;
     }
+    //here were checking to see if someone sent spotify data and if so, let's capture that data
+
 
     _createClass(Sound, [{
         key: 'componentDidMount',
@@ -13492,9 +13516,12 @@ var Sound = exports.Sound = function (_React$Component) {
                 _this2.setState({
                     'track': data
                 });
+                //let's make the spotify widget visible 
                 document.getElementById("Spotifyframe").style.visibility = "visible";
             });
         }
+        //this is what handles our spotify search button queries. Once the user hits submit that data is sent through a socket to the server and processed server side. 
+
     }, {
         key: 'handleSubmitMusic',
         value: function handleSubmitMusic(event) {
@@ -13506,6 +13533,8 @@ var Sound = exports.Sound = function (_React$Component) {
                 'searchQuery': searchQuery
             });
         }
+        //here is where we piece everything together and render the spotify button on the screen, search box and button. 
+
     }, {
         key: 'render',
         value: function render() {
@@ -30534,6 +30563,10 @@ var _Content = __webpack_require__(108);
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 ReactDOM.render(React.createElement(_Content.Content, null), document.getElementById('content'));
+//Javar & Honorio Worked on this
+
+//This file here is the js file included in our index. were telling it here to render all the stuff from content, and put it on our index html page 
+//in the content div
 
 /***/ })
 /******/ ]);

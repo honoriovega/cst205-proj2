@@ -1,3 +1,6 @@
+//Written by Javar A. code sets up our view for spotify, and allows it to talk to our backend sockets. 
+
+
 import * as React from 'react';
 import { Socket } from './Socket';
 
@@ -8,14 +11,17 @@ export class Sound extends React.Component {
             track : " "
         };
     }
+    //here were checking to see if someone sent spotify data and if so, let's capture that data
     componentDidMount() {
     Socket.on('fromSpotify' ,(data) =>{
         this.setState({
             'track' : data 
             });
+            //let's make the spotify widget visible 
         document.getElementById("Spotifyframe").style.visibility ="visible";
     });
     }
+    //this is what handles our spotify search button queries. Once the user hits submit that data is sent through a socket to the server and processed server side. 
      handleSubmitMusic(event) {
          event.preventDefault();
          var searchType = document.getElementById('SearchFor').value;
@@ -25,6 +31,7 @@ export class Sound extends React.Component {
             'searchQuery' : searchQuery,
         });
      }
+     //here is where we piece everything together and render the spotify button on the screen, search box and button. 
       render() {
         return (
         <div>    

@@ -1,3 +1,20 @@
+"""
+ Course : CST205
+ Title : botcommands.py
+ Authors: Javar Alexander, Honorio Vega
+ Abstract : This contains the possible commands that the bot can do.
+		    It can be made to repeat what a user said. It can also be
+		    made to fetch pictures and gif's from Getty and Giffy
+		    respectively. 
+ Date : 03/15/2017
+ Who worked on what: Honorio worked on parsing and processing the text.
+				     Javar wrote on the functions called that called
+				     external API's
+
+GITHUB LINK : https://github.com/honoriovega/cst205-proj2
+
+"""
+
 from random import randint,choice
 import gettyApi
 import json

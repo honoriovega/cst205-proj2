@@ -1,8 +1,21 @@
+/*
+ Course : CST205
+ Title : index.html
+ Authors: Honorio Vega, Javar Alexander
+ Abstract : Client side code to display the messages. 
+ Date : 03/15/2017
+ Who worked on what: Honorio wrote the handleLink function.
+
+*/
+
+
 import * as React from 'react';
 
 import { Button } from './Button';
 import { Socket } from './Socket';
+//authors  Honorio V.
 
+//this class checks links to see if their urls. If they are then we break them up by general urls, image urls, and youtube urls and display them approaitely
 export class Chatroom extends React.Component {
 
 		 handleLink(link)		

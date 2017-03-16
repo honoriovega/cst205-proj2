@@ -1,7 +1,9 @@
 import * as React from 'react';
 
 import { Socket } from './Socket';
-
+//Filename: Button.js
+//authors Javar A, Honorio V. Antonio V. We all worked on this together. 
+//making buttons here that deal with sending message data from the client to the server. 
 export class Button extends React.Component {
         
         
@@ -14,17 +16,16 @@ export class Button extends React.Component {
         console.log('bruh i made a new number : ', random);
         console.log('sahhhh dude : ');
         
-        // javar webpack is now running
+        // grabbing the contents of the textbox and storing them
         var referenceToMessage = document.getElementById('msg');
 		var newMsg = referenceToMessage.value;
 		referenceToMessage.value = "";
-		console.log("tried to send ", newMsg);
+	
 
-        console.log("messag is " + newMsg);
-       
+//resetting the value of the textbox.    
 	document.getElementById('msg').value = " ";
 	
-console.log('Generated a random number: ', random);
+//before sending the message, checking to see if the user is authenticated
 FB.getLoginStatus((response) => {
 if (response.status == 'connected') {
     
@@ -60,6 +61,7 @@ if (user.isSignedIn()) {
     });
     
 }
+//letting the user know to sign in when attempting to send a message without being authenticated
 else {
     var header = document.getElementById("banner");
     header.innerHTML = "You must be logged in to message!";

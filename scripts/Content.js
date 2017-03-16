@@ -1,10 +1,12 @@
-import * as React from 'react';
+//Content.JS
+//Authors Honorio V. & Javar Alexander - Worked on this together
+//this is the file that takes in user messages from the server 
 
+import * as React from 'react';
 import { Button } from './Button';
 import { Socket } from './Socket';
 import { Chatroom } from './Chatroom';
 import {Sound} from './Sound';
-
 
 export class Content extends React.Component {
     constructor(props) {
@@ -35,7 +37,7 @@ function tryToGreet() {
     if (response.status == 'connected') {
         
     
-        console.log("facbook user is logged in");
+        //here were checking to see if the user is connected via fb or google, if so we send their respective oAuth token to the server
         Socket.emit('greet user', {
         'google_user_token': '',
         'facebook_user_token':
@@ -62,7 +64,7 @@ function tryToGreet() {
     });
     }        
    
-        
+        //here were grabbing all messages send into the chat room and storing them in messages
         Socket.on('all messages', (data) => {
             this.setState({
                 'messages': data['messages']
@@ -82,6 +84,7 @@ function tryToGreet() {
                 'my name': data['name'],
             })
         });
+        //this was susposed to display a whole list of users, but is broken
         Socket.on('list of all users', (data) => {
             console.log('Got a list of all users from the server:', data);
             this.setState({
@@ -100,8 +103,7 @@ function tryToGreet() {
         let all_users = this.state['all users'].map(
 			(user) => <li key={user}>{user}</li>
 		);
-	
-		
+	//rendering buttons and the spotify container
 		
         return (
             <div>

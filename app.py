@@ -1,3 +1,27 @@
+"""
+ Course : CST205
+ Title : app.py
+ Authors: Javar Alexander, Honorio Vega, Antonio Villagomez
+ Abstract : This program is the driver of the program. It sets up
+             the server. It also broadcasts and sends new messages.
+			   aswell as saving the messages to a database. It pulls
+			   pictures from Getty and Giphy API's and sends them to
+			   the users
+ Date : 03/15/2017
+ Who worked on what: Javar and Honorio worked on this file. Javar
+					   wrote the spotify feature. Honorio worked on the
+					   database and received and sending images. All other
+				        feautures in this file were a combination of 
+				        work from Javar and Honorio. For example, Javar
+				        worked on parts of the BOT and Honorio worked
+				        on it also
+
+GITHUB LINK : https://github.com/honoriovega/cst205-proj2
+
+"""
+
+
+
 import random, os, flask, flask_socketio, flask_sqlalchemy,requests, time
 from random import randint, choice
 from flask_socketio import send
@@ -36,6 +60,8 @@ all_messages = []
 all_connected_users = { };
 all_numbers = []
 
+# fetch all message from database and store them in dictionary 
+# and append to a list
 def fetchAllMessages():
 	messages = Message.query.all()
 	temp = []
@@ -50,6 +76,7 @@ def fetchAllMessages():
 
 	return temp
 
+# broadcasst the messages
 def fetchAndEmit():
 	all_messages[:] = fetchAllMessages()
 
@@ -57,26 +84,31 @@ def fetchAndEmit():
 	'messages': all_messages
 	})
 
+# add message to our database
 def addMessage(userPicture, name, msg):
 	message = Message(userPicture,name, msg)
 	db.session.add(message)
 	db.session.commit()
 
+# add message to our database
 def addBotMessage(msg):
 	BOT_PICTURE = '/static/bot.jpg'
 	BOT_NAME = 'Bender_from_futurama'
 	addMessage(BOT_PICTURE,BOT_NAME,msg)
 
+# add message to our database
 def addBotMessageAPI(link):
 	BOT_PICTURE = '/static/bot.jpg'
 	BOT_NAME = 'Bender_from_futurama'
 	addPictureMessage(BOT_PICTURE,BOT_NAME,link)
 
+# add message to our database
 def addPictureMessage(userPicture, name, apiLink):
 	message = Message(userPicture,name, '', apiLink)
 	db.session.add(message)
 	db.session.commit()
 
+# this is where the app starts
 @app.route('/')
 def hello():
 	keywords = ['technology','forest','background']
@@ -84,10 +116,13 @@ def hello():
 
 	return flask.render_template('index.html',back=a)
 
+# When the user conencts call the fetchAndEmit command
+# which pulls the messages from the database and broadcasts them
 @socketio.on('connect')
 def on_connect():
 	fetchAndEmit()
 
+# this function was used for testing purposes
 @socketio.on('new number')
 def on_new_number(data):
 	all_numbers.append(100)
@@ -95,6 +130,8 @@ def on_new_number(data):
 			'numbers' : all_numbers
 	})
 
+
+# Function that Javar wrote. Fetches data from the Spotify API and display it
 @socketio.on('Spotify')
 def spotify(data):
 	tracks =[]
@@ -117,6 +154,10 @@ def spotify(data):
 	random_track_link = "https://embed.spotify.com/?uri="+random_track
 	socketio.emit('fromSpotify', random_track_link)
 
+
+# this function was ment as featuer to greet the user on log in
+# the feature was not implemented as their was issue. We didn't
+# want to remove it beacause it might break our code. For now it is just here
 @socketio.on('greet user')
 def greet_user(data):
 	picture = ''
@@ -146,6 +187,9 @@ def greet_user(data):
 
 		fetchAndEmit()
 
+# When a new message is received this function
+# stores it in the database, checks to see if it a bot command
+# or a link. 
 @socketio.on('new msg')
 def on_new_msg(data):
 	facebookAPI = 'https://graph.facebook.com/v2.8/me?fields=id%2Cname%2Cpicture&access_token='
@@ -198,6 +242,8 @@ def on_new_msg(data):
 			addBotMessage(response)
 
 	fetchAndEmit()
+
+# this gets the server up an running
 if __name__ == '__main__':
 	socketio.run(
 		app,

@@ -1,6 +1,26 @@
+"""
+ Course : CST205
+ Title : botcommands.py
+ Authors: Javar Alexander, Honorio Vega
+ Abstract : This file contains the commands for the getty api.
+			It contains two functions. One to fetch the background for
+			the chat app and the other to retrieve images based on a users
+			request. For example if a user types "!! getty dogs" the
+			the getImages command will take that string and parse it
+			It will extract the search term and make an api call to 
+			Getty. It will response a result and pick a random image
+			and return it.  
+ Date : 03/15/2017
+ Who worked on what: Honorio generated the API keys and wrote the
+					 getImages function. Javar wrote the initbackground
+					 function
+
+GITHUB LINK : https://github.com/honoriovega/cst205-proj2
+"""
+
+
 import requests
 from random import randint,choice
-
 
 def getImages(search_term):
    # fiels=detail_set
