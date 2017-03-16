@@ -79,5 +79,6 @@ img {
     height:80px;
     width:250px;
     position: absolute;
+    top:90;
     visibility:hidden
 }
