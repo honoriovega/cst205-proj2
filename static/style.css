@@ -83,10 +83,10 @@ img {
     
 }
 #Spotifyframe {
-    height:330px;
+    height:335px;
     width:302px;
     position: absolute;
-    top:220;
+    top:250;
     right: 198;
     visibility: hidden
         
