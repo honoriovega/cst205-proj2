@@ -55,7 +55,6 @@ html {
 	opacity: 0.8;
 	overflow-y:scroll;
 	background-color: #ffffff;
-	right:100;
 }
 #msgtext{
   padding:15px;
@@ -77,8 +76,8 @@ img {
     height:250px;
 }
 #Spotifyframe {
-    height:320;
-    width:180;
+    height:80;
+    width:120;
     visibility:hidden;
     position: absolute;
     top: 100px;
