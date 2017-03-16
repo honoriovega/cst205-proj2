@@ -13525,8 +13525,12 @@ var Sound = exports.Sound = function (_React$Component) {
                             'Track'
                         )
                     ),
-                    React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),
-                    React.createElement('input', { type: 'submit', id: 'submit' })
+                    React.createElement(
+                        'div',
+                        { className: 'spotifyinput' },
+                        React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),
+                        React.createElement('input', { type: 'submit', id: 'submit' })
+                    )
                 ),
                 React.createElement('div', null)
             );

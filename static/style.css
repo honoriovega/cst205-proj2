@@ -75,8 +75,15 @@ img {
     width:250px;
     height:250px;
 }
+#spotifyinput{
+    
+    position: absolute;
+    top:220;
+    right: 198; 
+    
+}
 #Spotifyframe {
-    height:340px;
+    height:330px;
     width:302px;
     position: absolute;
     top:220;

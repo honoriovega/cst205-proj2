@@ -251,9 +251,7 @@ def on_new_msg(data):
 	else:
 		print "yes an url"
 		addPictureMessage(picture,USERNAME,url)
-		
 	#fetchAndEmit()
-	
 	# handle bot command
 	if(msg[:2] == '!!'):
 		response = botcommands.processBotCommand(msg)
@@ -264,12 +262,9 @@ def on_new_msg(data):
 				addBotMessage(response)
 		else:
 			addBotMessage(response)
-		
-		
-		
+	
 
 	fetchAndEmit()
-
 if __name__ == '__main__':
 	socketio.run(
 		app,
