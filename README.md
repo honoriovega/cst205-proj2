@@ -3,6 +3,7 @@
 ## CST 205
 ## 03/16/2016
 ## to run the program, go here: <a href="https://cst205-project2.herokuapp.com/">https://cst205-project2.herokuapp.com/</a>
+## github repo <a href="https://github.com/honoriovega/cst205-proj2">https://github.com/honoriovega/cst205-proj2</a>
 ## Project Desciption
 
 ### For this project, we decided to make a web app where users can login and chat with one another. We added external apis such as
