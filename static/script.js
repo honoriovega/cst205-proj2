@@ -13298,12 +13298,17 @@ var Content = exports.Content = function (_React$Component) {
                     React.createElement('div', { onClick: this.tryToGree,
                         className: 'g-signin2',
                         'data-theme': 'dark' }),
-                    React.createElement(_Chatroom.Chatroom, { messages: this.state.messages }),
+                    React.createElement(_Chatroom.Chatroom, { messages: this.state.messages })
+                ),
+                React.createElement(
+                    'div',
+                    { className: 'spotifyContainer' },
                     React.createElement(
-                        'div',
-                        { className: 'spotifyContainer' },
-                        React.createElement(_Sound.Sound, null)
-                    )
+                        'h4',
+                        null,
+                        ' Group music player '
+                    ),
+                    React.createElement(_Sound.Sound, null)
                 )
             );
         }
