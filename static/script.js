@@ -13294,16 +13294,16 @@ var Content = exports.Content = function (_React$Component) {
                     'data-auto-logout-link': 'true' }),
                 React.createElement(
                     'div',
+                    { className: 'spotifyContainer' },
+                    React.createElement(_Sound.Sound, null)
+                ),
+                React.createElement(
+                    'div',
                     null,
                     React.createElement('div', { onClick: this.tryToGree,
                         className: 'g-signin2',
                         'data-theme': 'dark' }),
                     React.createElement(_Chatroom.Chatroom, { messages: this.state.messages })
-                ),
-                React.createElement(
-                    'div',
-                    { className: 'spotifyContainer' },
-                    React.createElement(_Sound.Sound, null)
                 )
             );
         }
