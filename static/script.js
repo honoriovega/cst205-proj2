@@ -13306,7 +13306,12 @@ var Content = exports.Content = function (_React$Component) {
                     React.createElement(
                         'h4',
                         null,
-                        ' Group music player '
+                        React.createElement(
+                            'small',
+                            null,
+                            ' Group music player'
+                        ),
+                        ' '
                     ),
                     React.createElement(_Sound.Sound, null)
                 )
