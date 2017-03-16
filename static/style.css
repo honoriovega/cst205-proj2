@@ -94,8 +94,6 @@ img {
 #spotifyText {
     font-family: Verdana;
 font-size: 20px;
-font-weight: 200;
-line-height: 18px;
 color: black;
 -webkit-text-fill-color: white; /* keeping text visible on any background */
 -webkit-text-stroke-width: 3px;
