@@ -6,8 +6,7 @@
 you can authenticate with either facebook or google. 
 
 ## github repo <a href="https://github.com/honoriovega/cst205-proj2">https://github.com/honoriovega/cst205-proj2</a>
-### <b> Note about github </b> We used one cloud 9 workspace. So all the pushes / commits show under Honorio's name since he created the repo. However, 
-we all contributed commited files and pushed them to github.
+### <b> Note about github </b> We used one cloud 9 workspace. So all the pushes / commits show under Honorio's name since he created the repo. However, we all contributed commited files and pushed them to github.
 
 
 ## Project Desciption
