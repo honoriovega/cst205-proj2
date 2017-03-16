@@ -55,6 +55,7 @@ html {
 	opacity: 0.8;
 	overflow-y:scroll;
 	background-color: #ffffff;
+	right:100;
 }
 #msgtext{
   padding:15px;
