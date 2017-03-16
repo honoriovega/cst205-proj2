@@ -80,5 +80,6 @@ img {
     width:250px;
     position: absolute;
     top:90;
+    right: 100;
     visibility:hidden
 }
