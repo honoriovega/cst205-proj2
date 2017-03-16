@@ -30,7 +30,6 @@ export class Sound extends React.Component {
         <div>    
         <div>
         <br />
-        <p id="spotifyText"> Group music player </p>
          <iframe id ="Spotifyframe" src={this.state.track}  frameborder="0" allowtransparency="true"></iframe>
          </div>
          <div className = "spotifyinput">
@@ -39,7 +38,7 @@ export class Sound extends React.Component {
                 <option value="Track" >Track</option>
                 </select>
                 <input type = "text" id = "searchQuery" name="searchQuery"/>
-                <input type="submit" id = "submit" />
+                <input type="submit" id = "submit" value = "search song!" />
             </form>
             </div>
             <div>
