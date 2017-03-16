@@ -76,8 +76,8 @@ img {
     height:250px;
 }
 #Spotifyframe {
-    height:250px;
-    width:80px;
+    height:80px;
+    width:250px;
     bottom:250;
     visibility:hidden
 }
