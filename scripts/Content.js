@@ -122,8 +122,9 @@ data-auto-logout-link="true">
                 </div>
                 <Chatroom messages={this.state.messages}/>
                 </div>
+                
                   <div className = "spotifyContainer">
-                   <h4> Group music player </h4>
+                  <h4> Group music player </h4>
                 <Sound/>
            </div>
            </div>
