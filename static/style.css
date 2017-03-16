@@ -79,7 +79,6 @@ img {
     height:80;
     width:120;
     visibility:hidden;
-    position: absolute;
     top: 100px;
     left: 0px;
 }
