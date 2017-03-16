@@ -124,7 +124,6 @@ data-auto-logout-link="true">
                 </div>
                 
                   <div className = "spotifyContainer">
-                  <p> Group music player </p>
                 <Sound/>
            </div>
            </div>
