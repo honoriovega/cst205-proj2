@@ -13516,6 +13516,7 @@ var Sound = exports.Sound = function (_React$Component) {
                     'div',
                     null,
                     React.createElement('br', null),
+                    React.createElement('br', null),
                     React.createElement('iframe', { id: 'Spotifyframe', src: this.state.track, frameborder: '0', allowtransparency: 'true' })
                 ),
                 React.createElement(
