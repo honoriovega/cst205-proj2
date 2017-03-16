@@ -90,13 +90,11 @@ img {
     right: 198;
          font-size: 30px;
 }
-#Spotifyframe , h4 {
+#Spotifyframe , p {
     position: absolute;
     top:150;
     right: 198;
-     font-size: 30px;
+     font-size: 20px;
 }
-small { 
-    font-size: smaller;
-}
+
 
