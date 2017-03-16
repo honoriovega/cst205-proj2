@@ -13515,6 +13515,7 @@ var Sound = exports.Sound = function (_React$Component) {
                 React.createElement(
                     'div',
                     null,
+                    React.createElement('br', null),
                     React.createElement(
                         'h4',
                         null,
