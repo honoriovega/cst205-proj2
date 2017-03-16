@@ -91,5 +91,15 @@ img {
     visibility: hidden
         
 }
+#Spotifyframe p {
+    font-family: Verdana;
+font-size: 57px;
+font-weight: 200;
+line-height: 26.4px;
+color: black;
+-webkit-text-fill-color: white; /* keeping text visible on any background */
+-webkit-text-stroke-width: 3px;
+-webkit-text-stroke-color: black;
+}
 
 
