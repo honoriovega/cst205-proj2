@@ -13513,9 +13513,14 @@ var Sound = exports.Sound = function (_React$Component) {
                 'div',
                 null,
                 React.createElement(
+                    'div',
+                    null,
+                    React.createElement('iframe', { id: 'Spotifyframe', src: this.state.track, frameborder: '0', allowtransparency: 'true' })
+                ),
+                React.createElement('div', { className: 'spotifyinput' }),
+                React.createElement(
                     'form',
                     { onSubmit: this.handleSubmitMusic },
-                    React.createElement('iframe', { id: 'Spotifyframe', src: this.state.track, frameborder: '0', allowtransparency: 'true' }),
                     React.createElement(
                         'select',
                         { id: 'SearchFor' },
