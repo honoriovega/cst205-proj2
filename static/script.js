@@ -13517,24 +13517,27 @@ var Sound = exports.Sound = function (_React$Component) {
                     null,
                     React.createElement('iframe', { id: 'Spotifyframe', src: this.state.track, frameborder: '0', allowtransparency: 'true' })
                 ),
-                React.createElement('div', { className: 'spotifyinput' }),
                 React.createElement(
-                    'form',
-                    { onSubmit: this.handleSubmitMusic },
+                    'div',
+                    { className: 'spotifyinput' },
                     React.createElement(
-                        'select',
-                        { id: 'SearchFor' },
+                        'form',
+                        { onSubmit: this.handleSubmitMusic },
                         React.createElement(
-                            'option',
-                            { value: 'Track' },
-                            'Track'
+                            'select',
+                            { id: 'SearchFor' },
+                            React.createElement(
+                                'option',
+                                { value: 'Track' },
+                                'Track'
+                            )
+                        ),
+                        React.createElement(
+                            'div',
+                            { className: 'spotifyinput' },
+                            React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),
+                            React.createElement('input', { type: 'submit', id: 'submit' })
                         )
-                    ),
-                    React.createElement(
-                        'div',
-                        { className: 'spotifyinput' },
-                        React.createElement('input', { type: 'text', id: 'searchQuery', name: 'searchQuery' }),
-                        React.createElement('input', { type: 'submit', id: 'submit' })
                     )
                 ),
                 React.createElement('div', null)
