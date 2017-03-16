@@ -91,7 +91,7 @@ img {
     visibility: hidden
         
 }
-#Spotifyframe p {
+#Spotifyframe .p {
     font-family: Verdana;
 font-size: 57px;
 font-weight: 200;
