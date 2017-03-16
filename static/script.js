@@ -13515,6 +13515,11 @@ var Sound = exports.Sound = function (_React$Component) {
                 React.createElement(
                     'div',
                     null,
+                    React.createElement(
+                        'h4',
+                        null,
+                        ' Group music player '
+                    ),
                     React.createElement('iframe', { id: 'Spotifyframe', src: this.state.track, frameborder: '0', allowtransparency: 'true' })
                 ),
                 React.createElement(

@@ -29,6 +29,7 @@ export class Sound extends React.Component {
         return (
         <div>    
         <div>
+        <h4> Group music player </h4>
          <iframe id ="Spotifyframe" src={this.state.track}  frameborder="0" allowtransparency="true"></iframe>
          </div>
          <div className = "spotifyinput">
