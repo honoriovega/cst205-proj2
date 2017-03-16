@@ -39,8 +39,8 @@ export class Sound extends React.Component {
                 <option value="Track" >Track</option>
                 </select>
                 <div className = "spotifyinput">
-                <input type = "text" id = "searchQuery" name="searchQuery" placeholder = "Search query" />
-                <input type="submit" id = "submit" text="Search for Songs" />
+                <input type = "text" id = "searchQuery" name="searchQuery"/>
+                <input type="submit" id = "submit" />
                 </div>
             </form>
             </div>
