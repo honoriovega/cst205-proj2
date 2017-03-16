@@ -1,6 +1,8 @@
 # CST-205 - Project 2
 ## Authors: Javar Alexander, Honorio Vega, Antonio Villagomez
-
+## CST 205
+## 03/16/2016
+## to run the program, go here: <a href="https://cst205-project2.herokuapp.com/">https://cst205-project2.herokuapp.com/</a>
 ## Project Desciption
 
 ### For this project, we decided to make a web app where users can login and chat with one another. We added external apis such as
@@ -8,5 +10,14 @@ Getty images for dynamic background images, spotify for our group music player. 
 Think of this as basically the structure for a web based slack clone. There is a bot that the user can interact with. 
 
 ## Who worked on what? 
-### Javar and Honorio worked on server side, setting up the chat functionality and bot commands, and ReactJS. 
+### Javar and Honorio worked on server side, setting up the chat functionality and bot commands, ReactJS, and Spotify integration. 
 ### Antonio focused more on client side views (CSS). 
+
+
+Name of project
+Names of team members
+Class
+Date
+How to run program
+Link to GitHub repository
+Future work
