@@ -6,24 +6,16 @@ export class Sound extends React.Component {
         super(props);
         this.state = {
             track : " "
-			
         };
     }
-    
-
-    
-
     componentDidMount() {
-    
     Socket.on('fromSpotify' ,(data) =>{
-        console.log("hello from spotify");
         this.setState({
             'track' : data 
             });
         document.getElementById("Spotifyframe").style.visibility ="visible";
     });
     }
-    
      handleSubmitMusic(event) {
          event.preventDefault();
          var searchType = document.getElementById('SearchFor').value;
@@ -33,14 +25,11 @@ export class Sound extends React.Component {
             'searchQuery' : searchQuery,
         });
      }
-    
-    
       render() {
         return (
         <div>    
-            
             <form onSubmit={this.handleSubmitMusic}>
-                <iframe id ="Spotifyframe" src={this.state.track} frameborder="0" allowtransparency="true"></iframe>
+                <iframe id ="Spotifyframe" src={this.state.track}  frameborder="0" allowtransparency="true"></iframe>
                 <select id = "SearchFor">
                 <option value="Track" >Track</option>
                 </select>
